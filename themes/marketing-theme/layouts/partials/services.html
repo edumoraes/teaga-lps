@@ -1,14 +1,15 @@
 <section id="services" class="services">
-  <div class="container container-center">
-    <h2>{{ .Params.services_section.title }}</h2>
-    <div class="services-grid">
-      {{ range .Params.services_section.items }}
-      <div class="service-card">
-        <div class="service-icon">{{ .icon }}</div>
-        <h3>{{ .title }}</h3>
-        <p>{{ .description }}</p>
+  <div class="container">
+    {{ range .Params.services }}
+      <h2 class="category-title">{{ .category }}</h2>
+      <div class="services-grid mb-5">
+        {{ range .items }}
+        <div class="service-card">
+          <div class="service-icon">{{ .icon }}</div>
+          <h3>{{ .title }}</h3>
+        </div>
+        {{ end }}
       </div>
-      {{ end }}
-    </div>
+    {{ end }}
   </div>
 </section>

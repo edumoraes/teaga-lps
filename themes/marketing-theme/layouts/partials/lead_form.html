@@ -1,0 +1,31 @@
+<section id="form" class="lead-capture">
+  <div class="container container-center">
+    <h2>{{ .Params.lead_capture.title }}</h2>
+    <p>{{ .Params.lead_capture.subtitle }}</p>
+    
+    <form class="contact-form" action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Nome Completo*</label>
+        <input type="text" id="name" name="name" required placeholder="Seu nome">
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail corporativo*</label>
+        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+      </div>
+      <div class="form-group">
+        <label for="phone">Agência ou Empresa</label>
+        <input type="text" id="company" name="company" placeholder="Nome da empresa">
+      </div>
+      <div class="form-group">
+        <label for="investment">Investimento mensal em anúncios</label>
+        <select id="investment" name="investment">
+          <option value="">Selecione...</option>
+          <option value="Ainda não invisto / Menos de R$2.000">Ainda não invisto / Menos de R$2.000</option>
+          <option value="De R$ 2.000 a R$ 5.000">De R$ 2.000 a R$ 5.000</option>
+          <option value="Mais de R$ 5.000">Mais de R$ 5.000</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Receber Contato Agora</button>
+    </form>
+  </div>
+</section>

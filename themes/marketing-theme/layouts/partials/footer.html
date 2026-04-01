@@ -1,8 +1,25 @@
 <footer id="contact" class="footer">
-  <div class="container container-center">
-    <h2>{{ .Params.footer.contact_title }}</h2>
-    <p>Email: <a href="mailto:{{ .Params.footer.email }}">{{ .Params.footer.email }}</a></p>
-    <p>Telefone: {{ .Params.footer.phone }}</p>
-    <p class="copyright">&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Todos os direitos reservados.</p>
+  <div class="container">
+    <div class="footer-top container-center">
+      <h2>{{ .Params.footer.contact_title }}</h2>
+      <p>{{ .Params.footer.contact_subtitle }}</p>
+      <div class="contact-links mt-4">
+        <a href="mailto:{{ .Params.footer.email }}" class="btn btn-primary">E-mail</a>
+        <!-- WhatsApp Link Placeholder -->
+        <a href="#" class="btn btn-outline">WhatsApp</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p>{{ .Params.footer.copyright }}</p>
+        <p>{{ .Params.footer.company_info }}</p>
+        <p>{{ .Params.footer.address }}</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Serviços</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
   </div>
 </footer>

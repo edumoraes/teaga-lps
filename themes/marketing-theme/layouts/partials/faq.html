@@ -1,0 +1,13 @@
+<section id="faq" class="faq">
+  <div class="container">
+    <h2 class="container-center">{{ .Params.faq.title }}</h2>
+    <div class="faq-list">
+      {{ range .Params.faq.questions }}
+      <div class="faq-item">
+        <h3 class="faq-question">{{ .question }}</h3>
+        <p class="faq-answer">{{ .answer | markdownify }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
