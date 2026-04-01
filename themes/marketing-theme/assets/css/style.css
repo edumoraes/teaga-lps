@@ -6,13 +6,17 @@
   --text-main: #ffffff;
   --text-muted: #8e8e8e;
   --text-dark: #1e293b; /* If we need dark text on white backgrounds */
-  --accent-primary: #f2542d; /* Red-Orange */
-  --accent-hover: #d74824;
+  --accent-primary: #4eff46; /* Neon Green */
+  --accent-hover: #3ddc36;
   --border-light: rgba(255, 255, 255, 0.1);
   --border-thick: rgba(255, 255, 255, 0.15);
   --font-serif: 'Lora', serif;
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+  --bg-contrast: #13151a; /* Lighter shade of dark gray for contrast sections */
+  --bg-contrast-card: rgba(255, 255, 255, 0.03); /* Elevated cards inside contrast sections */
+  --text-contrast: #ffffff;
+  --text-contrast-muted: #8e8e8e;
 }
 
 * { 
@@ -27,6 +31,21 @@ body {
   background-color: var(--bg-color);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
 }
 
 /* Headings */
@@ -75,8 +94,8 @@ h1, h2, h3, h4 {
 }
 .nav-content { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); text-decoration: none; color: var(--text-main); }
-.nav-links a { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; transition: color 0.2s ease;}
-.nav-links a:hover { color: var(--accent-primary); }
+.nav-links a:not(.btn) { margin-left: 2rem; text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; transition: color 0.2s ease;}
+.nav-links a:not(.btn):hover { color: var(--accent-primary); }
 .nav-links .btn { margin-left: 2.5rem; }
 
 /* Buttons */
@@ -96,7 +115,8 @@ h1, h2, h3, h4 {
 }
 .btn-primary { 
   background-color: var(--accent-primary); 
-  color: white; 
+  color: var(--bg-color); 
+  font-weight: 700;
 }
 .btn-primary:hover {
   background-color: var(--accent-hover);
@@ -193,7 +213,7 @@ h1, h2, h3, h4 {
 
 
 /* Services */
-.services { padding: 6rem 0; background-color: var(--bg-color); }
+.services { padding: 6rem 0; background-color: var(--bg-contrast); color: var(--text-contrast); }
 .services-header { text-align: center; margin-bottom: 4rem; }
 .category-title { 
   font-size: 1rem; 
@@ -208,15 +228,17 @@ h1, h2, h3, h4 {
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
 .service-card { 
   padding: 3rem 2rem; 
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-contrast-card);
   border: 1px solid var(--border-light); 
   border-radius: 12px; 
   text-align: left; 
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 .service-card:hover {
   transform: translateY(-5px);
   border-color: var(--border-thick);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 .service-icon { 
   font-size: 2.5rem; 
@@ -228,13 +250,13 @@ h1, h2, h3, h4 {
   margin-bottom: 1rem;
 }
 .service-card p {
-  color: var(--text-muted);
+  color: var(--text-contrast-muted);
   font-size: 0.95rem;
   line-height: 1.7;
 }
 
 /* CTA Banner / General sections */
-.cta-banner { padding: 8rem 0; text-align: center; border-top: 1px solid var(--border-light); background-color: var(--bg-color); }
+.cta-banner { padding: 8rem 0; text-align: center; background-color: var(--bg-color); }
 .cta-banner h2 { font-size: 3rem; margin-bottom: 1.5rem; }
 .cta-banner p { font-size: 1.25rem; margin-bottom: 3rem; color: var(--text-muted); max-width: 600px; margin-left: auto; margin-right: auto; }
 
@@ -286,20 +308,20 @@ h1, h2, h3, h4 {
 .footer-links a:hover { color: var(--text-main); }
 
 /* Clients & FAQ */
-.clients { padding: 5rem 0; border-top: 1px solid var(--border-light); background-color: var(--bg-color); }
+.clients { padding: 5rem 0; border-top: 1px solid var(--border-light); background-color: var(--bg-contrast); color: var(--text-contrast); }
 .clients h2 { text-align: center; margin-bottom: 3rem; font-family: var(--font-mono); font-size: 1rem; color: var(--accent-primary); letter-spacing: 0.1em; text-transform: uppercase; }
 .clients-grid { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
 .client-logo {
   padding: 1.5rem 2.5rem;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-contrast-card);
   border: 1px solid var(--border-light);
   border-radius: 8px;
-  color: var(--text-muted);
+  color: var(--text-contrast-muted);
   font-family: var(--font-mono);
   font-size: 0.9rem;
   transition: all 0.3s ease;
 }
-.client-logo:hover { border-color: var(--text-main); color: var(--text-main); transform: translateY(-3px); }
+.client-logo:hover { border-color: var(--text-contrast); color: var(--text-contrast); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
 .faq { padding: 6rem 0; border-top: 1px solid var(--border-light); background-color: var(--bg-color); }
 .faq h2 { text-align: center; margin-bottom: 4rem; font-size: 3rem; }
