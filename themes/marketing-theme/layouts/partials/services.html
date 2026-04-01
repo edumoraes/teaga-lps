@@ -1,0 +1,14 @@
+<section id="services" class="services">
+  <div class="container container-center">
+    <h2>{{ .Params.services_section.title }}</h2>
+    <div class="services-grid">
+      {{ range .Params.services_section.items }}
+      <div class="service-card">
+        <div class="service-icon">{{ .icon }}</div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

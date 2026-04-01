@@ -1,0 +1,8 @@
+<footer id="contact" class="footer">
+  <div class="container container-center">
+    <h2>{{ .Params.footer.contact_title }}</h2>
+    <p>Email: <a href="mailto:{{ .Params.footer.email }}">{{ .Params.footer.email }}</a></p>
+    <p>Telefone: {{ .Params.footer.phone }}</p>
+    <p class="copyright">&copy; {{ now.Format "2006" }} {{ .Site.Title }}. Todos os direitos reservados.</p>
+  </div>
+</footer>
