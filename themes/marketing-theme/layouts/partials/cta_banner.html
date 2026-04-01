@@ -1,6 +1,6 @@
 <section class="cta-banner">
   <div class="container container-center">
-    <h2>{{ .Params.cta.title }}</h2>
+    <h2>{{ .Params.cta.title | safeHTML }}</h2>
     <p>{{ .Params.cta.subtitle }}</p>
     <a href="{{ .Params.cta.button_link }}" class="btn btn-primary btn-large">{{ .Params.cta.button_text }}</a>
   </div>

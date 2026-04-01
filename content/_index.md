@@ -3,10 +3,10 @@ title: "Teagá - Aceleramos a performance do seu negócio"
 description: "Transformamos suas estratégias de marketing em uma máquina de vendas com anúncios online."
 
 hero:
-  title: "Aceleramos a performance do seu negócio e geramos mais resultados com anúncios online."
-  subtitle: "Transformamos suas estratégias de marketing em uma máquina de vendas, adaptada às necessidades do seu negócio. Permitindo que você mantenha o foco no crescimento sustentável e no fortalecimento do seu negócio."
-  button_text: "Agendar uma Reunião"
-  button_link: "#form"
+  title: 'Aceleramos a <em class="accent">performance</em> do seu negócio e geramos mais <em class="accent">resultados</em> com anúncios online.'
+  subtitle: 'Transformamos suas estratégias de marketing em uma máquina de vendas, adaptada às necessidades do seu negócio. Permitindo que você mantenha o foco no crescimento sustentável e no fortalecimento do seu negócio.'
+  button_text: 'Agendar uma Reunião'
+  button_link: '#form'
 
 lead_capture:
   title: "Dar o próximo passo leva menos de 1 minuto"
@@ -56,10 +56,10 @@ clients:
   title: "Negócios que aceleramos"
 
 cta:
-  title: "Vamos acelerar o crescimento do seu negócio juntos!"
-  subtitle: "Agende uma reunião e descubra como transformar suas estratégias de marketing em uma máquina de vendas."
-  button_text: "AGENDAR UMA REUNIÃO!"
-  button_link: "#form"
+  title: 'Vamos <em class="accent">acelerar o crescimento</em> do seu negócio juntos!'
+  subtitle: 'Agende uma reunião e descubra como transformar suas estratégias de marketing em uma máquina de vendas.'
+  button_text: 'AGENDAR UMA REUNIÃO!'
+  button_link: '#form'
 
 faq:
   title: "Perguntas Frequentes"

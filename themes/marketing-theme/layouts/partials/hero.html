@@ -1,7 +1,29 @@
 <section class="hero">
   <div class="container hero-content">
-    <h1 class="hero-title">{{ .Params.hero.title }}</h1>
+    <h1 class="hero-title">{{ .Params.hero.title | safeHTML }}</h1>
     <p class="hero-subtitle">{{ .Params.hero.subtitle }}</p>
-    <a href="{{ .Params.hero.button_link }}" class="btn btn-primary">{{ .Params.hero.button_text }}</a>
+    <div>
+      <a href="{{ .Params.hero.button_link }}" class="btn btn-primary btn-large">{{ .Params.hero.button_text }}</a>
+      <a href="#services" class="btn btn-outline btn-large" style="margin-left: 1rem;">Nossos Serviços</a>
+    </div>
+
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="red"></span>
+          <span class="yellow"></span>
+          <span class="green"></span>
+        </div>
+        <div class="terminal-title">bash - teaga-cli</div>
+      </div>
+      <div class="terminal-body">
+        <p><span class="cmd">$</span> ./teaga-cli --start <span class="str">"vendas"</span></p>
+        <p class="comment"># Inicializando motores do marketing...</p>
+        <p>✔ Análise de dados concluída.</p>
+        <p>✔ Funis de conversão estruturados e otimizados.</p>
+        <p>✔ Campanhas de performance ativas no Google & Meta.</p>
+        <p><span class="cmd">></span> Escalando a operação de crescimento <span class="str">status=100%</span></p>
+      </div>
+    </div>
   </div>
 </section>
