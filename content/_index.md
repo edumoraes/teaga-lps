@@ -3,14 +3,36 @@ title: "Teagá - Aceleramos a performance do seu negócio"
 description: "Transformamos suas estratégias de marketing em uma máquina de vendas com anúncios online."
 
 hero:
-  title: 'Aceleramos a <em class="accent">performance</em> do seu negócio e geramos mais <em class="accent">resultados</em> com anúncios online.'
+  title: 'Aceleramos a <span class="accent" style="font-style: italic;">performance</span> do seu negócio e geramos mais <span class="accent" style="font-style: italic;">resultados</span> com anúncios online.'
   subtitle: 'Transformamos suas estratégias de marketing em uma máquina de vendas, adaptada às necessidades do seu negócio. Permitindo que você mantenha o foco no crescimento sustentável e no fortalecimento do seu negócio.'
   button_text: 'Agendar uma Reunião'
-  button_link: '#form'
+  button_link: '#contact'
+  secondary_button_text: 'Ver Nossos Serviços'
+  secondary_button_link: '#services'
 
-lead_capture:
-  title: "Dar o próximo passo leva menos de 1 minuto"
-  subtitle: "Preencha o formulário e receba o contato de um dos nossos especialistas em anúncios online."
+benefits:
+  title: "Como aceleramos suas vendas"
+  description: "Nossa metodologia transforma tráfego em receita, focando e otimizando o seu investimento em anúncios online."
+  items:
+    - title: "Geração de Leads Qualificados"
+      text: "Atraímos as pessoas certas que já procuram pelo seu produto ou serviço através de Google e Meta Ads."
+    - title: "Máquina de Vendas Automática"
+      text: "Criamos funis de páginas sob medida para captar e nutrir potenciais clientes 24 horas por dia."
+    - title: "Monitoramento e Retenção"
+      text: "Avaliamos os dados diariamente para baratear o custo por clique (CAC) e escalar apenas o que dá lucro."
+
+cases:
+  title: "Negócios que aceleramos"
+  items:
+    - title: "E-commerce"
+      metric: "Escala Certa"
+      description: "Otimizamos o ROAS de catálogos via Google Shopping e Meta Ads para máxima rentabilidade."
+    - title: "Clínicas e Consultórios"
+      metric: "Lotação Contínua"
+      description: "Lotamos agendas localmente utilizando captação geográfica hipersegmentada."
+    - title: "Negócios Locais em Geral"
+      metric: "Fluxo de Vendas"
+      description: "Aumentamos as visitas ao seu estabelecimento conectando pessoas próximas à sua oferta."
 
 services:
   - category: "Performance"
@@ -43,7 +65,7 @@ services:
     items:
       - title: "Criação de Landing Pages"
         icon: "🖥️"
-      - title: "Criação de Sites Prime (Até 5 páginas)"
+      - title: "Criação de Sites Prime"
         icon: "🌐"
   - category: "Identidade Visual"
     items:
@@ -53,13 +75,26 @@ services:
         icon: "🔄"
 
 clients:
-  title: "Negócios que aceleramos"
+  title: "O que nossos clientes dizem"
+  items:
+    - quote: "A estratégia da Teagá mudou completamente nosso fluxo comercial de forma positiva. Transformou a captação de clientes."
+      author: "João Silva"
+      role: "Empresário"
+    - quote: "Profissionais que nos escutam, engajados e que realmente entregaram os leads de forma constante, sem que a gente precisasse ficar pedindo."
+      author: "Maria Santos"
+      role: "Diretora Comercial"
+
+about:
+  title: "Sua nova equipe de anúncios online"
+  description: "A Teagá Digital nasceu com o propósito de descomplicar o tráfego pago para empresas e empreendedores de forma transparente. Não somos apenas executores; somos parceiros de crescimento e arquitetos de canais de vendas que dão previsibilidade ao seu capital."
+  button_text: "Falar Diretamente Conosco"
+  button_link: "#contact"
 
 cta:
-  title: 'Vamos <em class="accent">acelerar o crescimento</em> do seu negócio juntos!'
-  subtitle: 'Agende uma reunião e descubra como transformar suas estratégias de marketing em uma máquina de vendas.'
+  title: 'Vamos <span class="accent">acelerar o crescimento</span> do seu negócio juntos!'
+  subtitle: 'Agende uma reunião estratégica para entendermos sua operação e criar sua máquina de vendas.'
   button_text: 'AGENDAR UMA REUNIÃO!'
-  button_link: '#form'
+  button_link: '#contact'
 
 faq:
   title: "Perguntas Frequentes"
@@ -71,11 +106,11 @@ faq:
     - question: "Qual o valor de investimento ideal em anúncios e tráfego pago?"
       answer: "Alguns fatores devem ser levados em conta para saber quanto se deve investir na Gestão de Tráfego em mídia paga de sua empresa, tais como: segmento, região, palavras chave, tamanho da concorrência e objetivo do cliente. Normalmente recomendamos o valor de R$ 50 diários (R$ 1.500 p/mês) em anúncios. Este valor pode variar para mais ou para menos a depender dos fatores informados acima."
     - question: "Quais as informações e materiais necessários para trabalhar com a Teagá?"
-      answer: "Para garantir o sucesso do nosso trabalho, é fundamental que você nos forneça algumas informações e materiais essenciais. Isso inclui:\n1. Acesso às contas de anúncios (Google Ads, Meta Ads, etc.): Precisamos do acesso administrador para gerenciar suas campanhas de forma eficiente.\n2. Identidade Visual: Logos, imagens, vídeos e qualquer material de marketing existente que possa ser utilizado nas campanhas.\n3. Informações detalhadas sobre o público-alvo: Quanto mais detalhes tivermos sobre seu público ideal, melhor conseguiremos segmentar e impactar as pessoas certas.\n4. Definição clara dos objetivos: É importante que você nos informe quais são suas metas principais, como aumentar as vendas, gerar leads, ou aumentar a visibilidade da marca.\n5. Dados e métricas anteriores: Se você já realizou campanhas de marketing antes, os dados dessas campanhas podem nos ajudar a entender melhor o que funcionou e o que pode ser melhorado.\n6. Orçamento disponível para anúncios: Precisamos saber qual será o investimento destinado às campanhas para otimizar ao máximo o retorno."
+      answer: "Para garantir o sucesso do nosso trabalho, é fundamental que você nos forneça algumas informações e materiais essenciais. Isso inclui:\n1. Acesso às contas de anúncios (Google Ads, Meta Ads, etc.).\n2. Identidade Visual ou Conteúdos Originais (Vídeos e criativos).\n3. Informações detalhadas sobre o cliente ideal da sua empresa.\n4. Definição clara dos objetivos: Aumentar as vendas, gerar leads, etc.\n5. Dados anteriores ou Budget aprovado para mídia semanal mensal."
 
 footer:
   contact_title: "Ainda tenho dúvidas e gostaria de conversar com alguém, como faço?"
-  contact_subtitle: "Não se preocupe! Envie-nos uma mensagem clicando no botão do Whatsapp ao lado direito da página que teremos o maior prazer em ajudar ou se preferir envie e-mail."
+  contact_subtitle: "Não se preocupe! Envie-nos uma mensagem no nosso e-mail oficial que teremos o maior prazer em ajudar rapidinho."
   email: "teagabrand@gmail.com"
   copyright: "© Copyright 2024 Todos os direitos reservados"
   company_info: "Teagá Digital – CNPJ: 45.463.055/0001-76"

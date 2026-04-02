@@ -1,0 +1,14 @@
+<section id="cases" class="cases section-padding">
+  <div class="container container-center">
+    <h2>{{ .Params.cases.title }}</h2>
+    <div class="grid cases-grid mt-4">
+      {{ range .Params.cases.items }}
+      <div class="card case-card">
+        <div class="case-metric mono accent">{{ .metric }}</div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

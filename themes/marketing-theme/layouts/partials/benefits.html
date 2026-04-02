@@ -1,0 +1,14 @@
+<section id="benefits" class="benefits section-padding">
+  <div class="container container-center">
+    <h2>{{ .Params.benefits.title }}</h2>
+    <p class="subtitle">{{ .Params.benefits.description }}</p>
+    <div class="grid benefits-grid mt-4">
+      {{ range .Params.benefits.items }}
+      <div class="card benefit-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

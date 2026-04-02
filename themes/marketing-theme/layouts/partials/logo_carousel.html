@@ -1,0 +1,20 @@
+{{ $clientLogos := readDir "themes/marketing-theme/static/images/clients" }}
+<div class="logo-carousel-section">
+  <div class="logo-carousel">
+    <div class="carousel-track">
+      {{/* O loop inicial */}}
+      {{ range $clientLogos }}
+      <div class="carousel-logo">
+        <img src="{{ printf "images/clients/%s" .Name | relURL }}" alt="Client Logo">
+      </div>
+      {{ end }}
+      
+      {{/* O mesmo loop duplicado para gerar o scroll infinito sem cortes */}}
+      {{ range $clientLogos }}
+      <div class="carousel-logo">
+        <img src="{{ printf "images/clients/%s" .Name | relURL }}" alt="Client Logo">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

@@ -8,6 +8,7 @@
   --text-dark: #1e293b; /* If we need dark text on white backgrounds */
   --accent-primary: #4eff46; /* Neon Green */
   --accent-hover: #3ddc36;
+  --accent-secondary: #009EFA; /* Light Blue */
   --border-light: rgba(255, 255, 255, 0.1);
   --border-thick: rgba(255, 255, 255, 0.15);
   --font-serif: 'Lora', serif;
@@ -42,7 +43,7 @@ body::after {
   height: 100vh;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.07;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 200px 200px;
@@ -123,13 +124,13 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
 }
 .btn-outline { 
-  border: 1px solid var(--border-thick); 
+  border: 1px solid var(--accent-secondary); 
   color: var(--text-main); 
   background: transparent;
 }
-.btn-outline:hover {
-  border-color: var(--text-main);
-  background-color: rgba(255,255,255,0.05);
+.btn-outline:hover, .btn-outline:focus {
+  background-color: transparent;
+  color: var(--accent-secondary);
 }
 .btn-block { display: block; width: 100%; }
 .btn-large { padding: 1.25rem 2.5rem; font-size: 1.15rem; }
@@ -144,8 +145,8 @@ h1, h2, h3, h4 {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
   background-size: 50px 50px;
   background-position: -1px -1px;
   pointer-events: none;
@@ -254,9 +255,11 @@ h1, h2, h3, h4 {
 .service-icon { 
   font-size: 2.5rem; 
   margin-bottom: 1.5rem; 
+  color: var(--accent-secondary);
 }
-.service-card h3 {
+.service-card h3, .service-card h4 {
   font-family: var(--font-mono);
+  color: var(--accent-primary);
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
@@ -318,21 +321,95 @@ h1, h2, h3, h4 {
 }
 .footer-links a:hover { color: var(--text-main); }
 
-/* Clients & FAQ */
-.clients { padding: 5rem 0; border-top: 1px solid var(--border-light); background-color: var(--bg-contrast); color: var(--text-contrast); }
-.clients h2 { text-align: center; margin-bottom: 3rem; font-family: var(--font-mono); font-size: 1rem; color: var(--accent-primary); letter-spacing: 0.1em; text-transform: uppercase; }
-.clients-grid { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-.client-logo {
-  padding: 1.5rem 2.5rem;
+/* Core Utilities & Grids */
+.section-padding { padding: 6rem 0; border-top: 1px solid var(--border-light); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.card {
+  padding: 3rem 2rem; 
   background-color: var(--bg-contrast-card);
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-  color: var(--text-contrast-muted);
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  border: 1px solid var(--border-light); 
+  border-radius: 12px; 
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-.client-logo:hover { border-color: var(--text-contrast); color: var(--text-contrast); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-thick);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* Specific Sections */
+.header-logo { max-height: 40px; display: block; }
+
+/* Logo Carousel */
+.logo-carousel-section {
+  background-color: var(--bg-color);
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.logo-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo-carousel::before,
+.logo-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.logo-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
+}
+.logo-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-color) 0%, transparent 100%);
+}
+.carousel-track {
+  display: inline-flex;
+  gap: 4rem;
+  align-items: center;
+  animation: scrollLogo 40s linear infinite;
+}
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+.carousel-logo img {
+  height: 50px;
+  max-width: 150px;
+  object-fit: contain;
+  /* Torna os logos totalmente brancos com alta claridade */
+  filter: grayscale(100%) brightness(0) invert(1) opacity(80%);
+  transition: filter 0.3s ease;
+}
+.carousel-logo img:hover {
+  filter: grayscale(100%) brightness(0) invert(1) opacity(100%);
+}
+
+@keyframes scrollLogo {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 2rem)); }
+}
+
+.benefits { background-color: var(--bg-color); }
+.benefits-grid { margin-top: 3rem; }
+
+.cases { background-color: var(--bg-contrast); color: var(--text-contrast); }
+.case-metric { font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem; color: var(--accent-primary); }
+.case-card h3 { color: var(--accent-secondary); margin-bottom: 0.5rem; }
+
+.clients { background-color: var(--bg-contrast); color: var(--text-contrast); }
+.testimonial-card .quote { font-size: 1.1rem; color: var(--text-contrast-muted); line-height: 1.7; font-style: italic; }
+
+.about { background-color: var(--bg-color); text-align: center; }
 
 .faq { padding: 6rem 0; border-top: 1px solid var(--border-light); background-color: var(--bg-color); }
 .faq h2 { text-align: center; margin-bottom: 4rem; font-size: 3rem; }

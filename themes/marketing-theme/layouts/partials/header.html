@@ -1,10 +1,13 @@
 <header class="navbar">
   <div class="container nav-content">
-    <a href="/" class="logo">{{ .Site.Title }}</a>
+    <a href="/" class="logo-link">
+      <img src="{{ "images/logo.webp" | relURL }}" alt="{{ .Site.Title }}" class="header-logo" width="120" height="auto">
+    </a>
     <nav class="nav-links">
+      <a href="#cases" class="mono">Cases</a>
       <a href="#services" class="mono">Serviços</a>
-      <a href="#faq" class="mono">FAQ</a>
-      <a href="#contact" class="btn btn-primary">Agendar Reunião</a>
+      <a href="#about" class="mono">Sobre</a>
+      <a href="#contact" class="btn btn-primary">Fale Conosco</a>
     </nav>
   </div>
 </header>
