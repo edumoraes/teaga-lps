@@ -1,0 +1,5 @@
+{{- $icon := .icon -}}
+{{- $class := .class | default "" -}}
+{{- with $icon -}}
+<span class="law-lp-icon{{ with $class }} {{ . }}{{ end }}" aria-hidden="true" style="--law-lp-icon-url: url('https://cdn.jsdelivr.net/npm/lucide-static@1.14.0/icons/{{ . }}.svg');"></span>
+{{- end -}}

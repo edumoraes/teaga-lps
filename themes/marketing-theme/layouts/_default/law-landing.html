@@ -16,7 +16,10 @@
         <a href="#oferta">Consultoria</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a href="{{ $whatsappHref }}" class="btn btn-primary law-lp-nav-cta">Agendar</a>
+      <a href="{{ $whatsappHref }}" class="btn btn-primary law-lp-nav-cta">
+        <span>Agendar</span>
+        {{ partial "lucide_icon.html" (dict "icon" "calendar-check" "class" "law-lp-btn-icon") }}
+      </a>
     </div>
   </header>
 
@@ -29,11 +32,17 @@
           <p class="law-lp-hero-subtitle">{{ .Params.hero.subtitle }}</p>
           <ul class="law-lp-check-list">
             {{ range .Params.hero.bullets }}
-            <li>{{ . }}</li>
+            <li>
+              {{ partial "lucide_icon.html" (dict "icon" "circle-check" "class" "law-lp-check-icon") }}
+              <span>{{ . }}</span>
+            </li>
             {{ end }}
           </ul>
           <div class="law-lp-hero-actions">
-            <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">{{ .Params.hero.cta }}</a>
+            <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">
+              <span>{{ .Params.hero.cta }}</span>
+              {{ partial "lucide_icon.html" (dict "icon" "arrow-right" "class" "law-lp-btn-icon") }}
+            </a>
             <span>{{ .Params.hero.microcopy }}</span>
           </div>
         </div>
@@ -41,20 +50,32 @@
         <div class="law-lp-visual" aria-label="Mockup de campanhas e agenda">
           <div class="law-lp-dashboard">
             <div class="law-lp-dashboard-top">
-              <span>Campanhas jurídicas</span>
+              <span>
+                {{ partial "lucide_icon.html" (dict "icon" "chart-line" "class" "law-lp-ui-icon") }}
+                Campanhas jurídicas
+              </span>
               <strong>Ativo</strong>
             </div>
             <div class="law-lp-metrics">
               <div>
-                <span>Leads</span>
+                <span>
+                  {{ partial "lucide_icon.html" (dict "icon" "users" "class" "law-lp-ui-icon") }}
+                  Leads
+                </span>
                 <strong>147</strong>
               </div>
               <div>
-                <span>Agend.</span>
+                <span>
+                  {{ partial "lucide_icon.html" (dict "icon" "calendar-check" "class" "law-lp-ui-icon") }}
+                  Agend.
+                </span>
                 <strong>38</strong>
               </div>
               <div>
-                <span>CPL</span>
+                <span>
+                  {{ partial "lucide_icon.html" (dict "icon" "trending-down" "class" "law-lp-ui-icon") }}
+                  CPL
+                </span>
                 <strong>-22%</strong>
               </div>
             </div>
@@ -69,15 +90,21 @@
           </div>
           <div class="law-lp-phone-card">
             <div class="law-lp-phone-header">
-              <span></span>
+              {{ partial "lucide_icon.html" (dict "icon" "message-circle" "class" "law-lp-ui-icon law-lp-phone-icon") }}
               <strong>WhatsApp</strong>
             </div>
             <div class="law-lp-message law-lp-message-muted">Tenho interesse em uma consulta sobre direito previdenciário.</div>
             <div class="law-lp-message">Horário confirmado para quarta, 15h.</div>
           </div>
           <div class="law-lp-calendar-card">
-            <span>Agenda da semana</span>
-            <strong>12 reuniões qualificadas</strong>
+            <div>
+              <span>
+                {{ partial "lucide_icon.html" (dict "icon" "calendar-days" "class" "law-lp-ui-icon") }}
+                Agenda da semana
+              </span>
+              <strong>12 reuniões qualificadas</strong>
+            </div>
+            {{ partial "lucide_icon.html" (dict "icon" "badge-check" "class" "law-lp-ui-icon law-lp-calendar-icon") }}
           </div>
         </div>
       </div>
@@ -93,7 +120,10 @@
           <p class="law-lp-section-lead">{{ .Params.audience.intro }}</p>
           <ul class="law-lp-check-list">
             {{ range .Params.audience.items }}
-            <li>{{ . }}</li>
+            <li>
+              {{ partial "lucide_icon.html" (dict "icon" "circle-check" "class" "law-lp-check-icon") }}
+              <span>{{ . }}</span>
+            </li>
             {{ end }}
           </ul>
         </div>
@@ -110,6 +140,7 @@
         <div class="law-lp-card-grid">
           {{ range .Params.differentials.items }}
           <article class="law-lp-card">
+            {{ partial "lucide_icon.html" (dict "icon" .icon "class" "law-lp-card-icon") }}
             <h3>{{ .title }}</h3>
             <p>{{ .text }}</p>
           </article>
@@ -127,7 +158,10 @@
         <div class="law-lp-timeline">
           {{ range $index, $step := .Params.process.steps }}
           <article class="law-lp-step">
-            <span>{{ printf "%02d" (add $index 1) }}</span>
+            <div class="law-lp-step-marker">
+              <span class="law-lp-step-number">{{ printf "%02d" (add $index 1) }}</span>
+              {{ partial "lucide_icon.html" (dict "icon" $step.icon "class" "law-lp-step-icon") }}
+            </div>
             <div>
               <h3>{{ $step.title }}</h3>
               <p>{{ $step.text }}</p>
@@ -163,13 +197,22 @@
           <h2>{{ .Params.offer.title }}</h2>
           <p class="law-lp-section-lead">{{ .Params.offer.subtitle }}</p>
           <p class="law-lp-urgency">{{ .Params.offer.urgency }}</p>
-          <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">{{ .Params.offer.cta }}</a>
+          <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">
+            <span>{{ .Params.offer.cta }}</span>
+            {{ partial "lucide_icon.html" (dict "icon" "arrow-right" "class" "law-lp-btn-icon") }}
+          </a>
         </div>
         <div class="law-lp-offer-list">
-          <h3>Você vai receber</h3>
+          <h3>
+            {{ partial "lucide_icon.html" (dict "icon" "clipboard-check" "class" "law-lp-heading-icon") }}
+            Você vai receber
+          </h3>
           <ul class="law-lp-check-list">
             {{ range .Params.offer.items }}
-            <li>{{ . }}</li>
+            <li>
+              {{ partial "lucide_icon.html" (dict "icon" "circle-check" "class" "law-lp-check-icon") }}
+              <span>{{ . }}</span>
+            </li>
             {{ end }}
           </ul>
         </div>
@@ -228,7 +271,10 @@
             <input type="checkbox" name="consent" value="Sim" required>
             <span>{{ .Params.lead_form.consent }}</span>
           </label>
-          <button type="submit" class="btn btn-primary btn-large btn-block">Enviar pelo WhatsApp</button>
+          <button type="submit" class="btn btn-primary btn-large btn-block">
+            <span>Enviar pelo WhatsApp</span>
+            {{ partial "lucide_icon.html" (dict "icon" "send" "class" "law-lp-btn-icon") }}
+          </button>
         </form>
       </div>
     </section>
@@ -242,6 +288,7 @@
         <div class="law-lp-faq-list">
           {{ range .Params.faq.questions }}
           <article class="law-lp-faq-item">
+            {{ partial "lucide_icon.html" (dict "icon" "circle-help" "class" "law-lp-faq-icon") }}
             <h3>{{ .question }}</h3>
             <p>{{ .answer }}</p>
           </article>
@@ -254,7 +301,10 @@
       <div class="container">
         <h2>{{ .Params.final_cta.title }}</h2>
         <p>{{ .Params.final_cta.text }}</p>
-        <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">{{ .Params.final_cta.cta }}</a>
+        <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">
+          <span>{{ .Params.final_cta.cta }}</span>
+          {{ partial "lucide_icon.html" (dict "icon" "arrow-right" "class" "law-lp-btn-icon") }}
+        </a>
       </div>
     </section>
   </main>
