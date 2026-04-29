@@ -11,7 +11,8 @@ hero:
   secondary_button_link: '#services'
 
 benefits:
-  title: "Como aceleramos suas vendas"
+  headline: "— Nossa Metodologia"
+  title: 'Transformamos tráfego qualificado em uma <span class="accent">máquina de vendas</span> contínua'
   description: "Nossa metodologia transforma tráfego em receita, focando e otimizando o seu investimento em anúncios online."
   items:
     - title: "Geração de Leads Qualificados"
@@ -22,7 +23,8 @@ benefits:
       text: "Avaliamos os dados diariamente para baratear o custo por clique (CAC) e escalar apenas o que dá lucro."
 
 cases:
-  title: "Negócios que aceleramos"
+  headline: "— Casos de Sucesso"
+  title: 'Negócios que tiveram sua rentabilidade <span class="accent">acelerada</span> por nossas campanhas'
   items:
     - title: "E-commerce"
       metric: "Escala Certa"
@@ -33,6 +35,10 @@ cases:
     - title: "Negócios Locais em Geral"
       metric: "Fluxo de Vendas"
       description: "Aumentamos as visitas ao seu estabelecimento conectando pessoas próximas à sua oferta."
+
+services_section:
+  headline: "— O Que Fazemos"
+  title: 'Soluções completas e validadas para <span class="accent">dominar</span> o seu mercado digital'
 
 services:
   - category: "Performance"
@@ -75,7 +81,8 @@ services:
         icon: "🔄"
 
 clients:
-  title: "O que nossos clientes dizem"
+  headline: "— Depoimentos"
+  title: 'O que nossos parceiros estão <span class="accent">falando</span> sobre os resultados da Teagá'
   items:
     - quote: "A estratégia da Teagá mudou completamente nosso fluxo comercial de forma positiva. Transformou a captação de clientes."
       author: "João Silva"
@@ -85,19 +92,22 @@ clients:
       role: "Diretora Comercial"
 
 about:
-  title: "Sua nova equipe de anúncios online"
+  headline: "— Sobre Nós"
+  title: 'Sua mais nova equipe de <span class="accent">alta performance</span> e parceira estratégica de crescimento'
   description: "A Teagá Digital nasceu com o propósito de descomplicar o tráfego pago para empresas e empreendedores de forma transparente. Não somos apenas executores; somos parceiros de crescimento e arquitetos de canais de vendas que dão previsibilidade ao seu capital."
   button_text: "Falar Diretamente Conosco"
   button_link: "#contact"
 
 cta:
-  title: 'Vamos <span class="accent">acelerar o crescimento</span> do seu negócio juntos!'
+  headline: "— Comece Agora"
+  title: 'Vamos <span class="accent">acelerar o crescimento</span> do seu negócio juntos'
   subtitle: 'Agende uma reunião estratégica para entendermos sua operação e criar sua máquina de vendas.'
   button_text: 'AGENDAR UMA REUNIÃO!'
   button_link: '#contact'
 
 faq:
-  title: "Perguntas Frequentes"
+  headline: "— Dúvidas Comuns"
+  title: 'Respostas rápidas para as principais <span class="accent">perguntas frequentes</span> que recebemos'
   questions:
     - question: "Para quem é a Teagá digital?"
       answer: "A nossa assessoria é para toda empresa que precisa vender mais através da internet, desde geração de Leads, visitas ao estabelecimento físico, vendas no ecommerce, obter mais downloads do seu aplicativo e muito mais. Importante que o seu produto ou serviço estejam totalmente de acordo com as políticas de publicidade das principais plataformas de anúncios como Google e Meta."

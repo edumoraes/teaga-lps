@@ -1,6 +1,7 @@
 <section id="benefits" class="benefits section-padding">
   <div class="container container-center">
-    <h2>{{ .Params.benefits.title }}</h2>
+    {{ if .Params.benefits.headline }}<h4 class="category-title" style="text-align: center; margin-bottom: 0.5rem;">{{ .Params.benefits.headline }}</h4>{{ end }}
+    <h2>{{ .Params.benefits.title | safeHTML }}</h2>
     <p class="subtitle">{{ .Params.benefits.description }}</p>
     <div class="grid benefits-grid mt-4">
       {{ range .Params.benefits.items }}

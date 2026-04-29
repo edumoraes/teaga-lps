@@ -1,6 +1,7 @@
 <section id="faq" class="faq">
   <div class="container">
-    <h2 class="container-center">{{ .Params.faq.title }}</h2>
+    {{ if .Params.faq.headline }}<h4 class="category-title" style="text-align: center; margin-bottom: 0.5rem; display: block;">{{ .Params.faq.headline }}</h4>{{ end }}
+    <h2 class="container-center">{{ .Params.faq.title | safeHTML }}</h2>
     <div class="faq-list">
       {{ range .Params.faq.questions }}
       <div class="faq-item">

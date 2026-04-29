@@ -1,6 +1,7 @@
 <section id="cases" class="cases section-padding">
   <div class="container container-center">
-    <h2>{{ .Params.cases.title }}</h2>
+    {{ if .Params.cases.headline }}<h4 class="category-title" style="text-align: center; margin-bottom: 0.5rem;">{{ .Params.cases.headline }}</h4>{{ end }}
+    <h2>{{ .Params.cases.title | safeHTML }}</h2>
     <div class="grid cases-grid mt-4">
       {{ range .Params.cases.items }}
       <div class="card case-card">

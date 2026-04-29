@@ -1,5 +1,6 @@
 <section class="cta-banner">
   <div class="container container-center">
+    {{ if .Params.cta.headline }}<h4 class="category-title" style="text-align: center; margin-bottom: 0.5rem;">{{ .Params.cta.headline }}</h4>{{ end }}
     <h2>{{ .Params.cta.title | safeHTML }}</h2>
     <p>{{ .Params.cta.subtitle }}</p>
     <a href="{{ .Params.cta.button_link }}" class="btn btn-primary btn-large">{{ .Params.cta.button_text }}</a>

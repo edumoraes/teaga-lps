@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+{{ $whatsappNumber := .Params.whatsapp_number | default "5592999999999" }}
+{{ $whatsappMessage := .Params.whatsapp_message | default "Olá, quero minha consultoria estratégica gratuita para advogados." }}
+{{ $whatsappHref := printf "https://wa.me/%s?text=%s" $whatsappNumber ($whatsappMessage | urlquery) }}
+<body class="law-lp">
+  <header class="law-lp-header">
+    <div class="container law-lp-nav">
+      <a href="/" class="law-lp-logo-link" aria-label="Teagá Digital">
+        <img src="{{ "images/logo.webp" | relURL }}" alt="Teagá Digital" class="law-lp-logo" width="120" height="40">
+      </a>
+      <nav class="law-lp-nav-links" aria-label="Navegação principal">
+        <a href="#para-quem">Para quem</a>
+        <a href="#metodo">Método</a>
+        <a href="#oferta">Consultoria</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="{{ $whatsappHref }}" class="btn btn-primary law-lp-nav-cta">Agendar</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="law-lp-hero">
+      <div class="container law-lp-hero-grid">
+        <div class="law-lp-hero-copy">
+          <p class="law-lp-eyebrow">{{ .Params.hero.eyebrow }}</p>
+          <h1>{{ .Params.hero.title }}</h1>
+          <p class="law-lp-hero-subtitle">{{ .Params.hero.subtitle }}</p>
+          <ul class="law-lp-check-list">
+            {{ range .Params.hero.bullets }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+          <div class="law-lp-hero-actions">
+            <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">{{ .Params.hero.cta }}</a>
+            <span>{{ .Params.hero.microcopy }}</span>
+          </div>
+        </div>
+
+        <div class="law-lp-visual" aria-label="Mockup de campanhas e agenda">
+          <div class="law-lp-dashboard">
+            <div class="law-lp-dashboard-top">
+              <span>Campanhas jurídicas</span>
+              <strong>Ativo</strong>
+            </div>
+            <div class="law-lp-metrics">
+              <div>
+                <span>Leads</span>
+                <strong>147</strong>
+              </div>
+              <div>
+                <span>Agend.</span>
+                <strong>38</strong>
+              </div>
+              <div>
+                <span>CPL</span>
+                <strong>-22%</strong>
+              </div>
+            </div>
+            <div class="law-lp-chart" aria-hidden="true">
+              <span style="height: 34%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 42%"></span>
+              <span style="height: 68%"></span>
+              <span style="height: 76%"></span>
+              <span style="height: 88%"></span>
+            </div>
+          </div>
+          <div class="law-lp-phone-card">
+            <div class="law-lp-phone-header">
+              <span></span>
+              <strong>WhatsApp</strong>
+            </div>
+            <div class="law-lp-message law-lp-message-muted">Tenho interesse em uma consulta sobre direito previdenciário.</div>
+            <div class="law-lp-message">Horário confirmado para quarta, 15h.</div>
+          </div>
+          <div class="law-lp-calendar-card">
+            <span>Agenda da semana</span>
+            <strong>12 reuniões qualificadas</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="para-quem" class="law-lp-section">
+      <div class="container law-lp-split">
+        <div>
+          <p class="law-lp-eyebrow">{{ .Params.audience.eyebrow }}</p>
+          <h2>{{ .Params.audience.title }}</h2>
+        </div>
+        <div>
+          <p class="law-lp-section-lead">{{ .Params.audience.intro }}</p>
+          <ul class="law-lp-check-list">
+            {{ range .Params.audience.items }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="law-lp-section law-lp-section-contrast">
+      <div class="container">
+        <div class="law-lp-section-heading">
+          <p class="law-lp-eyebrow">{{ .Params.differentials.eyebrow }}</p>
+          <h2>{{ .Params.differentials.title }}</h2>
+          <p>{{ .Params.differentials.subtitle }}</p>
+        </div>
+        <div class="law-lp-card-grid">
+          {{ range .Params.differentials.items }}
+          <article class="law-lp-card">
+            <h3>{{ .title }}</h3>
+            <p>{{ .text }}</p>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo" class="law-lp-section">
+      <div class="container">
+        <div class="law-lp-section-heading">
+          <p class="law-lp-eyebrow">{{ .Params.process.eyebrow }}</p>
+          <h2>{{ .Params.process.title }}</h2>
+        </div>
+        <div class="law-lp-timeline">
+          {{ range $index, $step := .Params.process.steps }}
+          <article class="law-lp-step">
+            <span>{{ printf "%02d" (add $index 1) }}</span>
+            <div>
+              <h3>{{ $step.title }}</h3>
+              <p>{{ $step.text }}</p>
+            </div>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="law-lp-section law-lp-proof">
+      <div class="container law-lp-proof-grid">
+        <div>
+          <p class="law-lp-eyebrow">{{ .Params.proof.eyebrow }}</p>
+          <h2>{{ .Params.proof.title }}</h2>
+          <p>{{ .Params.proof.text }}</p>
+        </div>
+        <div class="law-lp-stats">
+          {{ range .Params.proof.stats }}
+          <div>
+            <strong>{{ .value }}</strong>
+            <span>{{ .label }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section id="oferta" class="law-lp-section law-lp-section-contrast">
+      <div class="container law-lp-offer">
+        <div>
+          <p class="law-lp-eyebrow">{{ .Params.offer.eyebrow }}</p>
+          <h2>{{ .Params.offer.title }}</h2>
+          <p class="law-lp-section-lead">{{ .Params.offer.subtitle }}</p>
+          <p class="law-lp-urgency">{{ .Params.offer.urgency }}</p>
+          <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">{{ .Params.offer.cta }}</a>
+        </div>
+        <div class="law-lp-offer-list">
+          <h3>Você vai receber</h3>
+          <ul class="law-lp-check-list">
+            {{ range .Params.offer.items }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="form" class="law-lp-section">
+      <div class="container law-lp-form-grid">
+        <div>
+          <p class="law-lp-eyebrow">Contato</p>
+          <h2>{{ .Params.lead_form.title }}</h2>
+          <p class="law-lp-section-lead">Ao enviar, abriremos o WhatsApp da Teagá com seus dados preenchidos para agilizar o atendimento.</p>
+        </div>
+        <form class="law-lp-form" data-law-form data-whatsapp-number="{{ $whatsappNumber }}" action="{{ $whatsappHref }}" method="get">
+          <label>
+            Nome completo
+            <input type="text" name="full_name" autocomplete="name" required>
+          </label>
+          <label>
+            E-mail profissional
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            WhatsApp
+            <input type="tel" name="phone" autocomplete="tel" required>
+          </label>
+          <label>
+            Nome do escritório
+            <input type="text" name="office" autocomplete="organization" required>
+          </label>
+          <label>
+            Cidade / Estado
+            <input type="text" name="city_state" required>
+          </label>
+          <label>
+            Área(s) de atuação principal(is)
+            <input type="text" name="practice_area" required>
+          </label>
+          <label>
+            Número médio de novos clientes por mês hoje
+            <input type="text" name="current_clients" inputmode="numeric" required>
+          </label>
+          <label>
+            Meta de novos clientes por mês nos próximos 3 meses
+            <input type="text" name="target_clients" inputmode="numeric" required>
+          </label>
+          <label>
+            Já investe em anúncios online?
+            <select name="has_ads" required>
+              <option value="">Selecione...</option>
+              <option value="Sim">Sim</option>
+              <option value="Não">Não</option>
+            </select>
+          </label>
+          <label class="law-lp-consent">
+            <input type="checkbox" name="consent" value="Sim" required>
+            <span>{{ .Params.lead_form.consent }}</span>
+          </label>
+          <button type="submit" class="btn btn-primary btn-large btn-block">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq" class="law-lp-section law-lp-section-contrast">
+      <div class="container">
+        <div class="law-lp-section-heading">
+          <p class="law-lp-eyebrow">{{ .Params.faq.eyebrow }}</p>
+          <h2>{{ .Params.faq.title }}</h2>
+        </div>
+        <div class="law-lp-faq-list">
+          {{ range .Params.faq.questions }}
+          <article class="law-lp-faq-item">
+            <h3>{{ .question }}</h3>
+            <p>{{ .answer }}</p>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="law-lp-final">
+      <div class="container">
+        <h2>{{ .Params.final_cta.title }}</h2>
+        <p>{{ .Params.final_cta.text }}</p>
+        <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">{{ .Params.final_cta.cta }}</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="law-lp-footer">
+    <div class="container law-lp-footer-grid">
+      <div>
+        <img src="{{ "images/logo.webp" | relURL }}" alt="Teagá Digital" class="law-lp-logo" width="120" height="40">
+      </div>
+      <div>
+        <p>{{ .Params.footer.copyright }}</p>
+        <p>{{ .Params.footer.company_info }}</p>
+        <p>{{ .Params.footer.address }}</p>
+      </div>
+    </div>
+  </footer>
+
+  {{ $lawScript := resources.Get "js/law-landing.js" | minify | fingerprint }}
+  <script src="{{ $lawScript.RelPermalink }}" integrity="{{ $lawScript.Data.Integrity }}" defer></script>
+</body>
+</html>

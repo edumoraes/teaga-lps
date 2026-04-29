@@ -1,6 +1,7 @@
 <section id="about" class="about section-padding">
   <div class="container container-center">
-    <h2>{{ .Params.about.title }}</h2>
+    {{ if .Params.about.headline }}<h4 class="category-title" style="text-align: center; margin-bottom: 0.5rem;">{{ .Params.about.headline }}</h4>{{ end }}
+    <h2>{{ .Params.about.title | safeHTML }}</h2>
     <p class="subtitle mb-4">{{ .Params.about.description }}</p>
     <a href="{{ .Params.about.button_link }}" class="btn btn-primary">{{ .Params.about.button_text }}</a>
   </div>

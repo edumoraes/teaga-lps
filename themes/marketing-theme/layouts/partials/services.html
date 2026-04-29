@@ -1,6 +1,7 @@
 <section id="services" class="services section-padding">
   <div class="container container-center">
-    <h2>Nossos Serviços</h2>
+    {{ if .Params.services_section.headline }}<h4 class="category-title" style="text-align: center; margin-bottom: 0.5rem;">{{ .Params.services_section.headline }}</h4>{{ end }}
+    <h2>{{ .Params.services_section.title | safeHTML }}</h2>
     {{ range .Params.services }}
       <h3 class="category-title mt-4" style="text-align: left;">— {{ .category }}</h3>
       <div class="grid services-grid mt-4 mb-5">
