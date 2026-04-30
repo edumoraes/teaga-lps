@@ -479,10 +479,10 @@ h1, h2, h3, h4 {
     rgba(var(--color-base-charcoal-rgb), 0.86);
   --color-section-dark-solid: var(--color-background-default);
   --color-section-light-solid: var(--color-background-inverse);
-  --law-lp-hero-image: url("/images/lp-advogados/hero-legal-compass.webp");
-  --law-lp-differentials-image: url("/images/lp-advogados/differentials-texture.webp");
-  --law-lp-consultation-image: url("/images/lp-advogados/consultation-overlay.webp");
-  --law-lp-final-image: url("/images/lp-advogados/final-cta-compass.webp");
+  --law-lp-hero-image: url("../images/lp-advogados/hero-legal-compass.webp");
+  --law-lp-differentials-image: url("../images/lp-advogados/differentials-texture.webp");
+  --law-lp-consultation-image: url("../images/lp-advogados/consultation-overlay.webp");
+  --law-lp-final-image: url("../images/lp-advogados/final-cta-compass.webp");
   --bg-color: var(--color-background-default);
   --bg-secondary: var(--color-overlay-gold-subtle);
   --text-main: var(--color-text-primary);
