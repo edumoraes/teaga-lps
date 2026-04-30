@@ -479,6 +479,10 @@ h1, h2, h3, h4 {
     rgba(var(--color-base-charcoal-rgb), 0.86);
   --color-section-dark-solid: var(--color-background-default);
   --color-section-light-solid: var(--color-background-inverse);
+  --law-lp-hero-image: url("/images/lp-advogados/hero-legal-compass.webp");
+  --law-lp-differentials-image: url("/images/lp-advogados/differentials-texture.webp");
+  --law-lp-consultation-image: url("/images/lp-advogados/consultation-overlay.webp");
+  --law-lp-final-image: url("/images/lp-advogados/final-cta-compass.webp");
   --bg-color: var(--color-background-default);
   --bg-secondary: var(--color-overlay-gold-subtle);
   --text-main: var(--color-text-primary);
@@ -615,7 +619,11 @@ h1, h2, h3, h4 {
   position: relative;
   overflow: hidden;
   padding: 7.5rem 0 5.5rem;
-  background: var(--color-section-dark-gradient);
+  background:
+    linear-gradient(90deg, rgba(var(--color-base-black-rgb), 0.98) 0%, rgba(var(--color-base-black-rgb), 0.84) 42%, rgba(var(--color-base-black-rgb), 0.36) 100%),
+    linear-gradient(135deg, var(--color-overlay-gold-subtle), rgba(var(--color-base-black-rgb), 0) 38%),
+    var(--law-lp-hero-image) right center / cover no-repeat,
+    var(--color-background-surface);
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -899,20 +907,28 @@ h1, h2, h3, h4 {
 }
 
 .law-lp-section {
+  position: relative;
+  overflow: hidden;
   padding: 6.5rem 0;
   background: var(--color-section-dark-solid);
   border-bottom: 1px solid var(--border-light);
 }
 
-.law-lp main > section:nth-of-type(3n + 1) {
+.law-lp-section > .container,
+.law-lp-final > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.law-lp main > .law-lp-section:nth-of-type(3n + 1) {
   background: var(--color-section-dark-gradient);
 }
 
-.law-lp main > section:nth-of-type(3n + 2) {
+.law-lp main > .law-lp-section:nth-of-type(3n + 2) {
   background: var(--color-section-dark-solid);
 }
 
-.law-lp main > section:nth-of-type(3n) {
+.law-lp main > .law-lp-section:nth-of-type(3n) {
   --text-main: var(--color-text-inverse);
   --text-muted: var(--color-background-subtle);
   --accent-primary: var(--color-brand-primary-hover);
@@ -923,22 +939,36 @@ h1, h2, h3, h4 {
   color: var(--text-main);
 }
 
-.law-lp main > section:nth-of-type(3n) .law-lp-card,
-.law-lp main > section:nth-of-type(3n) .law-lp-offer-list,
-.law-lp main > section:nth-of-type(3n) .law-lp-faq-item,
-.law-lp main > section:nth-of-type(3n) .law-lp-stats div {
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-card,
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-offer-list,
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-faq-item,
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-stats div {
   background: rgba(var(--color-base-black-rgb), 0.035);
   box-shadow: none;
 }
 
-.law-lp main > section:nth-of-type(3n) .law-lp-check-list li,
-.law-lp main > section:nth-of-type(3n) .law-lp-card p,
-.law-lp main > section:nth-of-type(3n) .law-lp-step p,
-.law-lp main > section:nth-of-type(3n) .law-lp-faq-item p,
-.law-lp main > section:nth-of-type(3n) .law-lp-section-heading p,
-.law-lp main > section:nth-of-type(3n) .law-lp-section-lead,
-.law-lp main > section:nth-of-type(3n) .law-lp-final p {
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-check-list li,
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-card p,
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-step p,
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-faq-item p,
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-section-heading p,
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-section-lead,
+.law-lp main > .law-lp-section:nth-of-type(3n) .law-lp-final p {
   color: var(--text-muted);
+}
+
+.law-lp main > .law-lp-section:nth-of-type(3) {
+  background:
+    linear-gradient(90deg, rgba(230, 224, 214, 0.96), rgba(230, 224, 214, 0.9)),
+    var(--law-lp-differentials-image) center / cover no-repeat,
+    var(--color-section-light-solid);
+}
+
+.law-lp main > #oferta {
+  background:
+    linear-gradient(90deg, rgba(230, 224, 214, 0.98) 0%, rgba(230, 224, 214, 0.92) 52%, rgba(230, 224, 214, 0.78) 100%),
+    var(--law-lp-consultation-image) right center / cover no-repeat,
+    var(--color-section-light-solid);
 }
 
 .law-lp-section h2,
@@ -999,6 +1029,28 @@ h1, h2, h3, h4 {
 .law-lp-timeline {
   display: grid;
   gap: 1rem;
+}
+
+.law-lp-method-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.law-lp-method-media {
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+}
+
+.law-lp-method-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
 }
 
 .law-lp-step {
@@ -1142,8 +1194,21 @@ h1, h2, h3, h4 {
 }
 
 .law-lp-final {
+  --text-main: var(--color-text-inverse);
+  --text-muted: var(--color-background-subtle);
+  --accent-primary: var(--color-brand-primary-hover);
+  --accent-secondary: var(--color-brand-primary-active);
+  --border-light: rgba(var(--color-base-black-rgb), 0.12);
+  --border-thick: rgba(var(--color-base-black-rgb), 0.2);
+  position: relative;
+  overflow: hidden;
   padding: 6.5rem 0;
+  color: var(--text-main);
   text-align: center;
+  background:
+    linear-gradient(180deg, rgba(230, 224, 214, 0.96), rgba(230, 224, 214, 0.92)),
+    var(--law-lp-final-image) center / cover no-repeat,
+    var(--color-section-light-solid);
 }
 
 .law-lp-final h2,
@@ -1178,7 +1243,8 @@ h1, h2, h3, h4 {
   .law-lp-split,
   .law-lp-proof-grid,
   .law-lp-offer,
-  .law-lp-form-grid {
+  .law-lp-form-grid,
+  .law-lp-method-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -1204,15 +1270,57 @@ h1, h2, h3, h4 {
 @media (max-width: 720px) {
   .law-lp {
     font-size: 1rem;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .law-lp main,
+  .law-lp section,
+  .law-lp-header {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: clip;
   }
 
   .law-lp .container {
+    width: 100%;
+    max-width: 100vw;
     padding-inline: 1.25rem;
+    overflow-x: clip;
+  }
+
+  .law-lp-hero-grid,
+  .law-lp-split,
+  .law-lp-proof-grid,
+  .law-lp-offer,
+  .law-lp-form-grid,
+  .law-lp-method-grid,
+  .law-lp-footer-grid,
+  .law-lp-visual,
+  .law-lp-dashboard,
+  .law-lp-method-media {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .law-lp-hero-copy,
+  .law-lp-section-heading,
+  .law-lp-split > div,
+  .law-lp-proof-grid > div,
+  .law-lp-offer > div,
+  .law-lp-form-grid > div {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .law-lp-nav {
     min-height: 68px;
     gap: 0.75rem;
+    width: 100%;
+    max-width: 100vw;
   }
 
   .law-lp-nav-links {
@@ -1227,24 +1335,37 @@ h1, h2, h3, h4 {
   .law-lp-nav-cta {
     padding: 0.7rem 0.85rem;
     font-size: 0.95rem;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 8rem;
   }
 
   .law-lp-hero {
     padding: 4.5rem 0 3.5rem;
+    background-position: center top;
   }
 
   .law-lp-hero-copy h1,
   .law-lp-section h2,
   .law-lp-final h2 {
-    font-size: 2.05rem;
+    max-width: 100%;
+    font-size: 1.95rem;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
   }
 
   .law-lp-hero-subtitle,
   .law-lp-section-lead,
   .law-lp-section-heading p,
   .law-lp-proof p,
-  .law-lp-final p {
+  .law-lp-final p,
+  .law-lp-check-list li,
+  .law-lp-card p,
+  .law-lp-step p,
+  .law-lp-faq-item p {
     font-size: 1.08rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .law-lp-hero-subtitle {

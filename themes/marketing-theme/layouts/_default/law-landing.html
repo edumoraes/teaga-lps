@@ -155,19 +155,24 @@
           <p class="law-lp-eyebrow">{{ .Params.process.eyebrow }}</p>
           <h2>{{ .Params.process.title | safeHTML }}</h2>
         </div>
-        <div class="law-lp-timeline">
-          {{ range $index, $step := .Params.process.steps }}
-          <article class="law-lp-step">
-            <div class="law-lp-step-marker">
-              <span class="law-lp-step-number">{{ printf "%02d" (add $index 1) }}</span>
-              {{ partial "lucide_icon.html" (dict "icon" $step.icon "class" "law-lp-step-icon") }}
-            </div>
-            <div>
-              <h3>{{ $step.title }}</h3>
-              <p>{{ $step.text }}</p>
-            </div>
-          </article>
-          {{ end }}
+        <div class="law-lp-method-grid">
+          <div class="law-lp-timeline">
+            {{ range $index, $step := .Params.process.steps }}
+            <article class="law-lp-step">
+              <div class="law-lp-step-marker">
+                <span class="law-lp-step-number">{{ printf "%02d" (add $index 1) }}</span>
+                {{ partial "lucide_icon.html" (dict "icon" $step.icon "class" "law-lp-step-icon") }}
+              </div>
+              <div>
+                <h3>{{ $step.title }}</h3>
+                <p>{{ $step.text }}</p>
+              </div>
+            </article>
+            {{ end }}
+          </div>
+          <figure class="law-lp-method-media">
+            <img src="{{ "images/lp-advogados/method-editorial.webp" | relURL }}" alt="Planejamento estratégico de marketing jurídico com relatórios e materiais de advocacia" width="1402" height="1122" loading="lazy">
+          </figure>
         </div>
       </div>
     </section>

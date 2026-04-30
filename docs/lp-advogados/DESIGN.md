@@ -99,6 +99,16 @@ Os tokens sao semanticos: descrevem papel de uso, nao apenas a cor isolada.
 - Text: body and long-form support copy use `color.text.secondary` for readability; reserve `color.text.muted` for low-emphasis metadata.
 - Icons: functional and decorative legal icons use `color.icon.secondary`; inactive or supporting icons use `color.icon.muted`.
 
+## Image Assets
+
+| Arquivo | Uso |
+| --- | --- |
+| `images/lp-advogados/hero-legal-compass.webp` | Background editorial do hero com overlay escuro para leitura. |
+| `images/lp-advogados/differentials-texture.webp` | Textura discreta da secao de diferenciais em fundo light. |
+| `images/lp-advogados/method-editorial.webp` | Imagem editorial lateral da secao de metodo. |
+| `images/lp-advogados/consultation-overlay.webp` | Overlay sutil da secao de consultoria estrategica. |
+| `images/lp-advogados/final-cta-compass.webp` | Background sutil do CTA final. |
+
 ## Compatibility Aliases
 
 The current CSS keeps legacy local aliases scoped to `.law-lp`, such as `--bg-color`,
