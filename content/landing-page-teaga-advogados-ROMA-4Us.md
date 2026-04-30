@@ -8,7 +8,7 @@ whatsapp_message: "Olá, quero minha consultoria estratégica gratuita para advo
 
 hero:
   eyebrow: "Tráfego pago para advogados"
-  title: "Encha a agenda do seu escritório com clientes qualificados em até 90 dias, sem ferir as regras da OAB"
+  title: 'Encha a agenda do seu escritório com <span class="accent">clientes qualificados</span> em até 90 dias, sem ferir as regras da OAB'
   subtitle: "A Teagá cria e otimiza campanhas de tráfego pago específicas para a sua área de atuação, trazendo todos os dias novas oportunidades para seu escritório, dentro das normas da OAB e sem depender apenas de indicações."
   cta: "Quero lotar a agenda do meu escritório"
   microcopy: "Consultoria estratégica gratuita para advogados - vagas limitadas por mês."
@@ -20,7 +20,7 @@ hero:
 
 audience:
   eyebrow: "Para quem é"
-  title: "Para advogados que querem parar de apagar incêndio e construir previsibilidade"
+  title: 'Para advogados que querem parar de apagar incêndio e construir <span class="accent">previsibilidade</span>'
   intro: "Esta solução é para você que:"
   items:
     - "Já tem boa entrega jurídica, mas sente que o fluxo de clientes é instável."
@@ -30,7 +30,7 @@ audience:
 
 differentials:
   eyebrow: "Diferenciais"
-  title: "O que a Teagá faz que outras agências não fazem pelo seu escritório"
+  title: 'O que a Teagá faz que <span class="accent">outras agências não fazem</span> pelo seu escritório'
   subtitle: "Não vendemos likes ou seguidores: vendemos oportunidades reais de novos clientes para o seu escritório."
   items:
     - icon: "target"
@@ -48,7 +48,7 @@ differentials:
 
 process:
   eyebrow: "Como funciona"
-  title: "Como vamos te ajudar a sair do zero até uma agenda cheia em até 90 dias"
+  title: 'Como vamos te ajudar a sair do zero até uma <span class="accent">agenda cheia</span> em até 90 dias'
   steps:
     - icon: "search"
       title: "Diagnóstico estratégico do seu escritório"
@@ -65,7 +65,7 @@ process:
 
 proof:
   eyebrow: "Prova"
-  title: "Resultados que um escritório de advocacia pode alcançar com um funil bem feito"
+  title: 'Resultados que um escritório de advocacia pode alcançar com um <span class="accent">funil bem feito</span>'
   text: "Reservado para depoimentos e números quando houver cases."
   stats:
     - value: "90 dias"
@@ -77,7 +77,7 @@ proof:
 
 offer:
   eyebrow: "Consultoria estratégica"
-  title: "Agende agora sua consultoria estratégica gratuita e descubra como encher a agenda do seu escritório em até 90 dias"
+  title: 'Agende agora sua <span class="accent">consultoria estratégica gratuita</span> e descubra como encher a agenda do seu escritório em até 90 dias'
   subtitle: "Nesta reunião online de 30 a 40 minutos, vamos mapear oportunidades concretas de crescimento usando tráfego pago, exclusivo para advogados."
   cta: "Quero minha consultoria estratégica gratuita"
   urgency: "Atendemos apenas um número limitado de escritórios por mês para garantir acompanhamento próximo. Garanta sua vaga."
@@ -88,12 +88,12 @@ offer:
     - "Recomendações para adequar sua comunicação às normas da OAB."
 
 lead_form:
-  title: "Preencha seus dados para receber o contato de um especialista em tráfego pago para advogados"
+  title: 'Preencha seus dados para receber o contato de um especialista em <span class="accent">tráfego pago para advogados</span>'
   consent: "Autorizo o contato da Teagá pelo WhatsApp e e-mail."
 
 faq:
   eyebrow: "FAQ"
-  title: "Antes de agendar, talvez você esteja se perguntando:"
+  title: 'Antes de agendar, talvez você esteja se <span class="accent">perguntando</span>:'
   questions:
     - question: "Isso está de acordo com as regras da OAB?"
       answer: "Sim. Toda estratégia é montada respeitando as diretrizes da OAB, evitando promessas de resultado específico, exposição de casos concretos e linguagem sensacionalista."
@@ -105,7 +105,7 @@ faq:
       answer: "Em muitos casos, surgem primeiras oportunidades nas primeiras semanas de campanha, mas trabalhamos para construção de previsibilidade, não promessa de milagre."
 
 final_cta:
-  title: "O próximo cliente certo para o seu escritório pode descobrir você hoje, não \"um dia\""
+  title: 'O próximo <span class="accent">cliente certo</span> para o seu escritório pode descobrir você hoje, não "um dia"'
   text: "Você não controla quando alguém vai indicar seu nome. Mas pode controlar sua presença nas principais plataformas onde seus futuros clientes estão pesquisando por ajuda agora. A Teagá está pronta para construir essa máquina com você e encher a agenda do seu escritório em até 90 dias."
   cta: "Quero lotar a agenda do meu escritório"
 

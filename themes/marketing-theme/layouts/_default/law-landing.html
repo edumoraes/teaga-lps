@@ -28,7 +28,7 @@
       <div class="container law-lp-hero-grid">
         <div class="law-lp-hero-copy">
           <p class="law-lp-eyebrow">{{ .Params.hero.eyebrow }}</p>
-          <h1>{{ .Params.hero.title }}</h1>
+          <h1>{{ .Params.hero.title | safeHTML }}</h1>
           <p class="law-lp-hero-subtitle">{{ .Params.hero.subtitle }}</p>
           <ul class="law-lp-check-list">
             {{ range .Params.hero.bullets }}
@@ -114,7 +114,7 @@
       <div class="container law-lp-split">
         <div>
           <p class="law-lp-eyebrow">{{ .Params.audience.eyebrow }}</p>
-          <h2>{{ .Params.audience.title }}</h2>
+          <h2>{{ .Params.audience.title | safeHTML }}</h2>
         </div>
         <div>
           <p class="law-lp-section-lead">{{ .Params.audience.intro }}</p>
@@ -134,7 +134,7 @@
       <div class="container">
         <div class="law-lp-section-heading">
           <p class="law-lp-eyebrow">{{ .Params.differentials.eyebrow }}</p>
-          <h2>{{ .Params.differentials.title }}</h2>
+          <h2>{{ .Params.differentials.title | safeHTML }}</h2>
           <p>{{ .Params.differentials.subtitle }}</p>
         </div>
         <div class="law-lp-card-grid">
@@ -153,7 +153,7 @@
       <div class="container">
         <div class="law-lp-section-heading">
           <p class="law-lp-eyebrow">{{ .Params.process.eyebrow }}</p>
-          <h2>{{ .Params.process.title }}</h2>
+          <h2>{{ .Params.process.title | safeHTML }}</h2>
         </div>
         <div class="law-lp-timeline">
           {{ range $index, $step := .Params.process.steps }}
@@ -176,7 +176,7 @@
       <div class="container law-lp-proof-grid">
         <div>
           <p class="law-lp-eyebrow">{{ .Params.proof.eyebrow }}</p>
-          <h2>{{ .Params.proof.title }}</h2>
+          <h2>{{ .Params.proof.title | safeHTML }}</h2>
           <p>{{ .Params.proof.text }}</p>
         </div>
         <div class="law-lp-stats">
@@ -194,7 +194,7 @@
       <div class="container law-lp-offer">
         <div>
           <p class="law-lp-eyebrow">{{ .Params.offer.eyebrow }}</p>
-          <h2>{{ .Params.offer.title }}</h2>
+          <h2>{{ .Params.offer.title | safeHTML }}</h2>
           <p class="law-lp-section-lead">{{ .Params.offer.subtitle }}</p>
           <p class="law-lp-urgency">{{ .Params.offer.urgency }}</p>
           <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">
@@ -223,7 +223,7 @@
       <div class="container law-lp-form-grid">
         <div>
           <p class="law-lp-eyebrow">Contato</p>
-          <h2>{{ .Params.lead_form.title }}</h2>
+          <h2>{{ .Params.lead_form.title | safeHTML }}</h2>
           <p class="law-lp-section-lead">Ao enviar, abriremos o WhatsApp da Teagá com seus dados preenchidos para agilizar o atendimento.</p>
         </div>
         <form class="law-lp-form" data-law-form data-whatsapp-number="{{ $whatsappNumber }}" action="{{ $whatsappHref }}" method="get">
@@ -283,7 +283,7 @@
       <div class="container">
         <div class="law-lp-section-heading">
           <p class="law-lp-eyebrow">{{ .Params.faq.eyebrow }}</p>
-          <h2>{{ .Params.faq.title }}</h2>
+          <h2>{{ .Params.faq.title | safeHTML }}</h2>
         </div>
         <div class="law-lp-faq-list">
           {{ range .Params.faq.questions }}
@@ -299,7 +299,7 @@
 
     <section class="law-lp-final">
       <div class="container">
-        <h2>{{ .Params.final_cta.title }}</h2>
+        <h2>{{ .Params.final_cta.title | safeHTML }}</h2>
         <p>{{ .Params.final_cta.text }}</p>
         <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">
           <span>{{ .Params.final_cta.cta }}</span>
