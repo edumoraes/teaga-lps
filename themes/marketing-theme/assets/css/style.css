@@ -654,6 +654,10 @@ h1, h2, h3, h4 {
   align-items: center;
 }
 
+.law-lp-hero-grid {
+  grid-template-columns: minmax(0, 0.76fr);
+}
+
 .law-lp-hero-copy h1,
 .law-lp-section h2,
 .law-lp-final h2 {
@@ -743,14 +747,6 @@ h1, h2, h3, h4 {
   line-height: 1.45;
 }
 
-.law-lp-visual {
-  position: relative;
-  min-height: 520px;
-}
-
-.law-lp-dashboard,
-.law-lp-phone-card,
-.law-lp-calendar-card,
 .law-lp-card,
 .law-lp-offer-list,
 .law-lp-form,
@@ -762,23 +758,6 @@ h1, h2, h3, h4 {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
 }
 
-.law-lp-dashboard {
-  padding: 1.5rem;
-}
-
-.law-lp-dashboard-top,
-.law-lp-phone-header,
-.law-lp-calendar-card,
-.law-lp-metrics {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.law-lp-dashboard-top span,
-.law-lp-metrics span,
-.law-lp-calendar-card span,
 .law-lp-stats span {
   color: var(--text-muted);
   font-family: var(--font-mono);
@@ -786,38 +765,6 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-.law-lp-dashboard-top span,
-.law-lp-metrics span,
-.law-lp-calendar-card span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.42rem;
-}
-
-.law-lp-ui-icon {
-  width: 1rem;
-  height: 1rem;
-  color: var(--accent-primary);
-}
-
-.law-lp-dashboard-top strong,
-.law-lp-calendar-card strong {
-  color: var(--accent-primary);
-}
-
-.law-lp-metrics {
-  margin: 1.5rem 0;
-}
-
-.law-lp-metrics div {
-  flex: 1;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.34);
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-}
-
-.law-lp-metrics strong,
 .law-lp-stats strong {
   display: block;
   margin-top: 0.3rem;
@@ -825,85 +772,6 @@ h1, h2, h3, h4 {
   font-family: var(--font-serif);
   font-size: 2.15rem;
   line-height: 1;
-}
-
-.law-lp-chart {
-  height: 210px;
-  display: flex;
-  align-items: end;
-  gap: 0.85rem;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.28);
-  border-radius: 8px;
-}
-
-.law-lp-chart span {
-  flex: 1;
-  min-width: 1.6rem;
-  border-radius: 4px 4px 0 0;
-  background: linear-gradient(180deg, var(--color-base-gold-soft) 0%, var(--accent-primary) 42%, var(--color-background-surface) 100%);
-}
-
-.law-lp-phone-card {
-  position: absolute;
-  right: 0;
-  bottom: 4.5rem;
-  width: min(300px, 72%);
-  padding: 1rem;
-  background: var(--color-background-surface);
-}
-
-.law-lp-phone-header {
-  justify-content: flex-start;
-  margin-bottom: 1rem;
-}
-
-.law-lp-phone-header span {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--color-background-surface));
-}
-
-.law-lp-phone-header .law-lp-phone-icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  border-radius: 0;
-  background: currentColor;
-}
-
-.law-lp-message {
-  margin-top: 0.75rem;
-  padding: 0.8rem;
-  border-radius: 8px;
-  background: rgba(var(--color-base-gold-rgb), 0.16);
-  color: var(--text-main);
-  font-size: 1rem;
-  line-height: 1.45;
-}
-
-.law-lp-message-muted {
-  background: var(--color-overlay-gold-soft);
-  color: var(--text-muted);
-}
-
-.law-lp-calendar-card {
-  position: absolute;
-  left: 1.5rem;
-  bottom: 0;
-  width: min(340px, 80%);
-  padding: 1.2rem;
-}
-
-.law-lp-calendar-card > div {
-  display: grid;
-  gap: 0.25rem;
-}
-
-.law-lp-calendar-icon {
-  width: 1.35rem;
-  height: 1.35rem;
-  color: var(--accent-primary);
 }
 
 .law-lp-section {
@@ -1033,12 +901,13 @@ h1, h2, h3, h4 {
 
 .law-lp-method-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
-  gap: 3rem;
+  grid-template-columns: minmax(0, 0.9fr) minmax(380px, 0.78fr);
+  gap: 3.5rem;
   align-items: center;
 }
 
 .law-lp-method-media {
+  min-height: 620px;
   overflow: hidden;
   border: 1px solid var(--border-light);
   border-radius: 8px;
@@ -1048,8 +917,9 @@ h1, h2, h3, h4 {
 .law-lp-method-media img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 5 / 4;
+  height: 100%;
+  min-height: 620px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
 }
 
@@ -1253,6 +1123,11 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .law-lp-method-media,
+  .law-lp-method-media img {
+    min-height: 520px;
+  }
+
   .law-lp-hero-copy h1 {
     font-size: 3.45rem;
   }
@@ -1262,9 +1137,6 @@ h1, h2, h3, h4 {
     font-size: 3rem;
   }
 
-  .law-lp-visual {
-    min-height: 460px;
-  }
 }
 
 @media (max-width: 720px) {
@@ -1297,8 +1169,6 @@ h1, h2, h3, h4 {
   .law-lp-form-grid,
   .law-lp-method-grid,
   .law-lp-footer-grid,
-  .law-lp-visual,
-  .law-lp-dashboard,
   .law-lp-method-media {
     width: 100%;
     max-width: 100%;
@@ -1387,24 +1257,9 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr;
   }
 
-  .law-lp-visual {
-    min-height: auto;
-  }
-
-  .law-lp-phone-card,
-  .law-lp-calendar-card {
-    position: static;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  .law-lp-metrics {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .law-lp-chart {
-    height: 170px;
+  .law-lp-method-media,
+  .law-lp-method-media img {
+    min-height: 420px;
   }
 
   .law-lp-hero-actions {
