@@ -4,110 +4,147 @@ description: "Landing page da Teagá para escritórios de advocacia que querem g
 layout: "law-landing"
 url: "/lp-advogados/"
 whatsapp_number: "5592999999999"
-whatsapp_message: "Olá, quero minha consultoria estratégica gratuita para advogados."
+whatsapp_message: "Olá, quero minha consultoria estratégica para advogados."
 
 hero:
-  eyebrow: "Tráfego pago para advogados"
-  title: 'Encha a agenda do seu escritório com <span class="accent">clientes qualificados</span> em até 90 dias, sem ferir as regras da OAB'
-  subtitle: "A Teagá cria e otimiza campanhas de tráfego pago específicas para a sua área de atuação, trazendo todos os dias novas oportunidades para seu escritório, dentro das normas da OAB e sem depender apenas de indicações."
-  cta: "Quero lotar a agenda do meu escritório"
-  microcopy: "Consultoria estratégica gratuita para advogados - vagas limitadas por mês."
-  bullets:
-    - "Pare de depender só de indicações e comece a receber contatos todos os dias."
-    - "Atraia apenas pessoas realmente interessadas no tipo de causa que você atende."
-    - "Tenha clareza de quanto investir para gerar mais clientes com previsibilidade."
-    - "Conte com um time especializado em performance para advogados e serviços."
+  badge: "MARKETING PARA ADVOGADOS"
+  compliance_seal: "OAB COMPLIANT"
+  title: 'Feche <span class="accent">mais <br>Contratos</span> <br>Todo Mês'
+  subtitle: "A Teagá conecta seu escritório a clientes que já procuram ajuda jurídica, sem depender apenas de indicações."
+  cta: "Quero fechar mais contratos"
+  microcopy: "Diagnóstico rápido para saber onde seu escritório pode captar mais clientes"
+
+trust_bar:
+  label: "Especialistas em"
+  tags:
+    - "Google Ads"
+    - "Meta Ads"
+    - "Trabalhista"
+    - "Previdenciário"
+    - "Família"
+    - "Empresarial"
+    - "Dentro das normas OAB"
+
+problem_solution:
+  eyebrow: "O problema que resolvemos"
+  title: "Boa advocacia não basta<br>se o cliente não te encontra"
+  cards:
+    - kind: "problem"
+      label: "Problema"
+      title: "Você depende de indicação e o fluxo de clientes é imprevisível."
+      text: "Impulsionou posts, não funcionou. Tentou fazer stories, não veio cliente. O escritório cresce na base da sorte, e você sabe que isso não é sustentável."
+    - kind: "solution"
+      label: "Solução"
+      title: "Uma máquina de captação que trabalha por você todos os dias."
+      text: "Campanhas no Google e Meta pensadas especificamente para advocacia, dentro das normas da OAB, trazendo oportunidades reais de contrato todos os meses."
 
 audience:
   eyebrow: "Para quem é"
-  title: 'Para advogados que querem parar de apagar incêndio e construir <span class="accent">previsibilidade</span>'
-  intro: "Esta solução é para você que:"
-  items:
-    - "Já tem boa entrega jurídica, mas sente que o fluxo de clientes é instável."
-    - "Está cansado de depender de indicações e redes sociais sem estratégia."
-    - "Já tentou impulsionar posts, mas nunca viu resultado consistente."
-    - "Quer um parceiro focado em tráfego pago, não mais uma agência genérica."
+  title: 'Criado para quem <span class="accent">já é bom</span><br>no que faz'
+  cards:
+    - icon: "scale"
+      title: "Advogados autônomos"
+      text: "Que querem construir uma carteira sólida sem depender de um sócio ou escritório maior."
+    - icon: "landmark"
+      title: "Escritórios de advocacia"
+      text: "Que já têm estrutura, mas precisam de previsibilidade de novos clientes todo mês."
+    - icon: "trending-up"
+      title: "Quem já investiu e não viu resultado"
+      text: "Que tentou agência generalista, não funcionou, e quer uma parceira especialista no nicho jurídico."
 
-differentials:
-  eyebrow: "Diferenciais"
-  title: 'O que a Teagá faz que <span class="accent">outras agências não fazem</span> pelo seu escritório'
-  subtitle: "Não vendemos likes ou seguidores: vendemos oportunidades reais de novos clientes para o seu escritório."
+deliverables:
+  eyebrow: "O que está incluso"
+  title: 'Tudo que seu escritório precisa<br><span class="accent">para crescer com método</span>'
   items:
-    - icon: "target"
-      title: "Foco em performance de verdade"
-      text: "Cada campanha nasce com meta clara de leads e contratos, com acompanhamento diário e otimização constante."
-    - icon: "briefcase"
-      title: "Experiência com empresas de serviços e negócios locais"
-      text: "Know-how em gerar demanda para quem depende de agenda, atendimento e relacionamento."
-    - icon: "shield-check"
-      title: "Estratégia alinhada à OAB"
-      text: "Copy, criativos e ofertas pensados para respeitar as normas da OAB."
-    - icon: "chart-column"
-      title: "Transparência total nos números"
-      text: "Relatórios simples, reuniões recorrentes e visão clara do que está funcionando."
+    - title: "Campanhas no Google e Meta"
+      text: "Configuração, criativos, copy e otimização diária voltados para captação de leads qualificados."
+    - title: "Landing Page estratégica"
+      text: "Página de captura otimizada para conversão, alinhada com o Google Ads para baixar o CPA."
+    - title: "Script de atendimento comercial"
+      text: "Roteiro com quebra de objeções e gatilhos para converter o lead em contrato no WhatsApp."
+    - title: "Relatórios 2-3x por semana"
+      text: "Números claros, sem enrolação. Você sabe exatamente o que está funcionando e o que está sendo ajustado."
+    - title: "Planilha de CRM"
+      text: "Controle de leads, etapa do funil e histórico de oportunidades em um só lugar."
+    - title: "Suporte direto via WhatsApp"
+      text: "Acesso ao time operacional sem burocracia. Dúvida ou ajuste, responde rápido."
+
+numbers:
+  eyebrow: "Resultados que você pode esperar"
+  title: 'Previsibilidade em<br><span class="accent">90 dias ou menos</span>'
+  items:
+    - value: "90 dias"
+      label: "Para construir um funil previsível de captação"
+    - value: "7 dias"
+      label: "Setup pronto após reunião de onboarding"
+    - value: "Google + Meta"
+      label: "Duas plataformas integradas para maximizar alcance"
 
 process:
   eyebrow: "Como funciona"
-  title: 'Como vamos te ajudar a sair do zero até uma <span class="accent">agenda cheia</span> em até 90 dias'
+  title: 'Do diagnóstico à <span class="accent">agenda cheia</span>'
   steps:
-    - icon: "search"
-      title: "Diagnóstico estratégico do seu escritório"
-      text: "Analisamos sua área (trabalhista, família, previdenciário, empresarial etc.), região de atuação, ticket, histórico de clientes e metas para montar um plano realista de crescimento."
-    - icon: "panel-top"
-      title: "Construção da máquina de captação"
-      text: "Criamos campanhas em Google Ads e Meta Ads, páginas de captura e integrações com WhatsApp ou CRM, tudo personalizado para o seu nicho jurídico."
-    - icon: "sliders-horizontal"
-      title: "Otimização diária das campanhas"
-      text: "Monitoramos e ajustamos segmentação, criativos, palavras-chave e orçamento para reduzir o custo por lead e aumentar o número de agendamentos."
-    - icon: "refresh-cw"
-      title: "Acompanhamento e ajustes contínuos"
-      text: "Você recebe relatórios claros, reuniões de alinhamento e recomendações para melhorar também o atendimento e fechamento dos leads."
+    - title: "Diagnóstico do seu escritório"
+      text: "Analisamos sua área de atuação, região, ticket médio e metas. Saímos com um plano real de crescimento, não genérico."
+    - title: "Construção da máquina de captação"
+      text: "Campanhas no Google e Meta, landing page e integração com WhatsApp configuradas em até 7 dias úteis."
+    - title: "Otimização contínua"
+      text: "Ajustes diários de segmentação, criativos e orçamento para reduzir CPL e aumentar o volume de agendamentos."
+    - title: "Relatórios e alinhamento mensal"
+      text: "Você acompanha tudo. Reunião mensal de estratégia + relatórios semanais para decisões rápidas."
 
-proof:
-  eyebrow: "Prova"
-  title: 'Resultados que um escritório de advocacia pode alcançar com um <span class="accent">funil bem feito</span>'
-  text: "Reservado para depoimentos e números quando houver cases."
-  stats:
-    - value: "90 dias"
-      label: "Horizonte de construção de previsibilidade"
-    - value: "Google + Meta"
-      label: "Canais integrados para captação"
-    - value: "OAB"
-      label: "Comunicação pensada para o contexto jurídico"
+testimonials:
+  eyebrow: "Resultados reais"
+  title: 'Escritórios que <span class="accent">já pararam<br>de depender de indicação</span>'
+  disclaimer: "* Depoimentos ilustrativos. Substitua pelos seus cases reais antes de publicar."
+  items:
+    - quote: "Em menos de 60 dias o Google já estava mandando contatos qualificados todo dia. Nunca tinha visto isso acontecer antes."
+      author: "Dr. Marcos V."
+      role: "Advogado Trabalhista · Manaus/AM"
+    - quote: "A Teagá entende do jurídico. Nenhum criativo feriu a OAB e os leads chegam sabendo o que querem. Facilita demais o fechamento."
+      author: "Dra. Camila R."
+      role: "Advogada de Família · Belém/PA"
+    - quote: "O que eu mais gostei foi a transparência. Recebo relatório de campanha 3x por semana. Sei exatamente para onde vai o meu investimento."
+      author: "Dr. Rafael T."
+      role: "Escritório Empresarial · Manaus/AM"
+    - quote: "Antes dependia 100% de indicação. Hoje tenho previsibilidade. Consigo planejar a equipe porque sei quantos clientes vêm por mês."
+      author: "Dra. Juliana F."
+      role: "Advogada Previdenciária · Fortaleza/CE"
+    - quote: "Setup foi rápido, em uma semana já estava no ar. E o suporte é ágil, qualquer dúvida o time responde no WhatsApp mesmo."
+      author: "Dr. Fábio A."
+      role: "Advogado Trabalhista · Goiânia/GO"
 
 offer:
-  eyebrow: "Consultoria estratégica"
-  title: 'Agende agora sua <span class="accent">consultoria estratégica gratuita</span> e descubra como encher a agenda do seu escritório em até 90 dias'
-  subtitle: "Nesta reunião online de 30 a 40 minutos, vamos mapear oportunidades concretas de crescimento usando tráfego pago, exclusivo para advogados."
-  cta: "Quero minha consultoria estratégica gratuita"
-  urgency: "Atendemos apenas um número limitado de escritórios por mês para garantir acompanhamento próximo. Garanta sua vaga."
+  eyebrow: "Dê o primeiro passo"
+  title: 'Consultoria estratégica<br><span class="accent">para advogados</span>'
+  subtitle: "30-40 minutos online. Saindo com um plano concreto para encher sua agenda nos próximos 90 dias."
+  cta: "Quero minha consultoria"
+  note: "Vagas limitadas por mês · Sem compromisso"
   items:
-    - "Análise do seu posicionamento digital atual (site, redes, anúncios - se houver)."
-    - "Ideias de campanhas específicas para sua área de atuação e região."
-    - "Estimativa de investimento necessário para atingir suas metas."
-    - "Recomendações para adequar sua comunicação às normas da OAB."
-
-lead_form:
-  title: 'Preencha seus dados para receber o contato de um especialista em <span class="accent">tráfego pago para advogados</span>'
-  consent: "Autorizo o contato da Teagá pelo WhatsApp e e-mail."
+    - "Diagnóstico do seu posicionamento digital atual"
+    - "Sugestão de campanhas para sua área e região"
+    - "Estimativa de investimento e CPL esperado"
+    - "Orientação para adequar comunicação à OAB"
 
 faq:
-  eyebrow: "FAQ"
-  title: 'Antes de agendar, talvez você esteja se <span class="accent">perguntando</span>:'
+  eyebrow: "Perguntas frequentes"
+  title: 'Antes de agendar,<br><span class="accent">tire suas dúvidas</span>'
   questions:
-    - question: "Isso está de acordo com as regras da OAB?"
-      answer: "Sim. Toda estratégia é montada respeitando as diretrizes da OAB, evitando promessas de resultado específico, exposição de casos concretos e linguagem sensacionalista."
-    - question: "Preciso já ter site ou Instagram estruturado?"
-      answer: "Não necessariamente. Na consultoria, avaliamos o que você já tem e priorizamos as ações que podem trazer clientes mais rápido."
+    - question: "Isso está de acordo com as normas da OAB?"
+      answer: "Sim. Toda estratégia é montada respeitando as diretrizes da OAB, sem promessas de resultado específico, sem exposição de casos e sem linguagem sensacionalista."
+    - question: "Preciso ter site ou Instagram estruturado?"
+      answer: "Não necessariamente. Na consultoria mapeamos o que você tem e priorizamos as ações que geram resultado mais rápido. Em muitos casos a landing page já resolve."
     - question: "Quanto preciso investir em anúncios?"
-      answer: "O valor ideal depende da sua área e região, mas já na consultoria mostramos faixas realistas de investimento e expectativa de geração de leads."
-    - question: "Quando começo a ver resultados?"
-      answer: "Em muitos casos, surgem primeiras oportunidades nas primeiras semanas de campanha, mas trabalhamos para construção de previsibilidade, não promessa de milagre."
+      answer: "Depende da sua área e região. Já na consultoria apresentamos faixas realistas de investimento e expectativa de geração de leads para o seu perfil específico."
+    - question: "Quando começo a ver os primeiros resultados?"
+      answer: "Em muitos casos surgem primeiros contatos nas primeiras semanas. Mas trabalhamos para construção de previsibilidade, o objetivo é um funil consistente, não um pico pontual."
+    - question: "A Teagá atende só advogados?"
+      answer: "Somos especializados em negócios locais e serviços. Para advogados, temos uma metodologia específica que respeita as particularidades do mercado jurídico."
 
 final_cta:
-  title: 'O próximo <span class="accent">cliente certo</span> para o seu escritório pode descobrir você hoje, não "um dia"'
-  text: "Você não controla quando alguém vai indicar seu nome. Mas pode controlar sua presença nas principais plataformas onde seus futuros clientes estão pesquisando por ajuda agora. A Teagá está pronta para construir essa máquina com você e encher a agenda do seu escritório em até 90 dias."
-  cta: "Quero lotar a agenda do meu escritório"
+  title: 'O próximo cliente certo<br>pode te encontrar <span class="accent">hoje</span>'
+  text: "Você não controla quando alguém vai indicar seu nome. Mas pode controlar sua presença onde seus futuros clientes estão buscando ajuda agora."
+  cta: "Agendar consultoria"
 
 footer:
   copyright: "© Copyright 2024 Todos os direitos reservados"

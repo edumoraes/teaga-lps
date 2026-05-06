@@ -1,47 +1,54 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var form = document.querySelector("[data-law-form]");
+  document.body.classList.add("is-js");
 
-  if (!form) {
-    return;
-  }
+  var faqItems = document.querySelectorAll(".law-lp-faq-item");
+  var revealItems = document.querySelectorAll("[data-reveal]");
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  faqItems.forEach(function (item) {
+    var button = item.querySelector(".law-lp-faq-question");
 
-    if (!form.reportValidity()) {
+    if (!button) {
       return;
     }
 
-    var data = new FormData(form);
-    var whatsappNumber = form.getAttribute("data-whatsapp-number") || "5592999999999";
-    var fieldMap = [
-      ["Nome", "full_name"],
-      ["E-mail", "email"],
-      ["WhatsApp", "phone"],
-      ["Escritório", "office"],
-      ["Cidade/Estado", "city_state"],
-      ["Área de atuação", "practice_area"],
-      ["Clientes/mês hoje", "current_clients"],
-      ["Meta em 3 meses", "target_clients"],
-      ["Já investe em anúncios", "has_ads"]
-    ];
+    button.addEventListener("click", function () {
+      var isOpen = item.classList.contains("is-open");
 
-    var lines = [
-      "Olá, quero minha consultoria estratégica gratuita para advogados.",
-      "",
-      "Meus dados:"
-    ];
+      faqItems.forEach(function (currentItem) {
+        var currentButton = currentItem.querySelector(".law-lp-faq-question");
 
-    fieldMap.forEach(function (field) {
-      var value = String(data.get(field[1]) || "").trim();
+        currentItem.classList.remove("is-open");
 
-      if (value) {
-        lines.push(field[0] + ": " + value);
+        if (currentButton) {
+          currentButton.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      if (!isOpen) {
+        item.classList.add("is-open");
+        button.setAttribute("aria-expanded", "true");
       }
     });
+  });
 
-    lines.push("Autorizo contato por WhatsApp e e-mail: Sim");
+  if (!("IntersectionObserver" in window)) {
+    revealItems.forEach(function (item) {
+      item.classList.add("is-visible");
+    });
 
-    window.location.href = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(lines.join("\n"));
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach(function (item) {
+    observer.observe(item);
   });
 });
