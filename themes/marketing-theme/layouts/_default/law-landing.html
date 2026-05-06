@@ -14,7 +14,6 @@
         <a href="#problema">Problema</a>
         <a href="#para-quem">Para quem</a>
         <a href="#incluso">Incluso</a>
-        <a href="#metodo">Método</a>
         <a href="#faq">FAQ</a>
       </nav>
       <a href="{{ $whatsappHref }}" class="btn btn-primary law-lp-nav-cta">
@@ -88,73 +87,48 @@
           <p class="law-lp-eyebrow">{{ .Params.audience.eyebrow }}</p>
           <h2>{{ .Params.audience.title | safeHTML }}</h2>
         </div>
-        <div class="law-lp-card-grid law-lp-audience-grid">
-          {{ range .Params.audience.cards }}
-          <article class="law-lp-card" data-reveal>
+        <div class="law-lp-audience-grid">
+          {{ range $index, $card := .Params.audience.cards }}
+          <article class="law-lp-card law-lp-audience-card law-lp-audience-card-{{ add $index 1 }}" data-reveal>
+            <span class="law-lp-audience-card-number">{{ printf "%02d" (add $index 1) }}</span>
             <span class="law-lp-card-icon-wrap">
-              {{ partial "lucide_icon.html" (dict "icon" .icon "class" "law-lp-card-icon") }}
+              {{ partial "lucide_icon.html" (dict "icon" $card.icon "class" "law-lp-card-icon") }}
             </span>
-            <h3>{{ .title }}</h3>
-            <p>{{ .text }}</p>
+            <h3>{{ $card.title }}</h3>
+            <p>{{ $card.text }}</p>
           </article>
           {{ end }}
         </div>
       </div>
     </section>
 
-    <section id="incluso" class="law-lp-section">
+    <section id="incluso" class="law-lp-section law-lp-deliverables-section">
       <div class="container">
-        <div class="law-lp-section-heading" data-reveal>
-          <p class="law-lp-eyebrow">{{ .Params.deliverables.eyebrow }}</p>
-          <h2>{{ .Params.deliverables.title | safeHTML }}</h2>
-        </div>
-        <div class="law-lp-deliverables-grid">
-          {{ range $index, $item := .Params.deliverables.items }}
-          <article class="law-lp-deliverable" data-reveal>
-            <strong>{{ printf "%02d" (add $index 1) }}</strong>
-            <div>
-              <h3>{{ $item.title }}</h3>
-              <p>{{ $item.text }}</p>
+        <div class="law-lp-deliverables-layout">
+          <figure class="law-lp-deliverables-media" data-reveal>
+            <img
+              src="{{ "images/lp-advogados/deliverables-portrait.webp" | relURL }}"
+              alt="Especialista da Teaga em ambiente executivo"
+              loading="lazy"
+              decoding="async">
+          </figure>
+          <div class="law-lp-deliverables-content">
+            <div class="law-lp-section-heading" data-reveal>
+              <p class="law-lp-eyebrow">{{ .Params.deliverables.eyebrow }}</p>
+              <h2>{{ .Params.deliverables.title | safeHTML }}</h2>
             </div>
-          </article>
-          {{ end }}
-        </div>
-      </div>
-    </section>
-
-    <section class="law-lp-section law-lp-numbers">
-      <div class="container">
-        <div class="law-lp-section-heading law-lp-section-heading-center" data-reveal>
-          <p class="law-lp-eyebrow">{{ .Params.numbers.eyebrow }}</p>
-          <h2>{{ .Params.numbers.title | safeHTML }}</h2>
-        </div>
-        <div class="law-lp-numbers-grid" data-reveal>
-          {{ range .Params.numbers.items }}
-          <article class="law-lp-number-card">
-            <strong>{{ .value }}</strong>
-            <span>{{ .label }}</span>
-          </article>
-          {{ end }}
-        </div>
-      </div>
-    </section>
-
-    <section id="metodo" class="law-lp-section">
-      <div class="container">
-        <div class="law-lp-section-heading" data-reveal>
-          <p class="law-lp-eyebrow">{{ .Params.process.eyebrow }}</p>
-          <h2>{{ .Params.process.title | safeHTML }}</h2>
-        </div>
-        <div class="law-lp-method-list">
-          {{ range $index, $step := .Params.process.steps }}
-          <article class="law-lp-step" data-reveal>
-            <div class="law-lp-step-number">{{ printf "%02d" (add $index 1) }}</div>
-            <div class="law-lp-step-content">
-              <h3>{{ $step.title }}</h3>
-              <p>{{ $step.text }}</p>
+            <div class="law-lp-deliverables-grid">
+              {{ range $index, $item := .Params.deliverables.items }}
+              <article class="law-lp-deliverable" data-reveal>
+                <strong>{{ printf "%02d" (add $index 1) }}</strong>
+                <div>
+                  <h3>{{ $item.title }}</h3>
+                  <p>{{ $item.text }}</p>
+                </div>
+              </article>
+              {{ end }}
             </div>
-          </article>
-          {{ end }}
+          </div>
         </div>
       </div>
     </section>
