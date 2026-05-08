@@ -54,7 +54,14 @@
 
     <section class="law-lp-trust-bar" aria-label="{{ .Params.trust_bar.label }}">
       <div class="container law-lp-trust-inner">
-        <span class="law-lp-trust-label">{{ .Params.trust_bar.label }}</span>
+        <span class="law-lp-eyebrow">{{ .Params.trust_bar.label }}</span>
+        <div class="law-lp-trust-platforms" role="list" data-reveal>
+          {{ range .Params.trust_bar.platforms }}
+          <span class="law-lp-trust-platform" role="listitem">
+            <img src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy" decoding="async">
+          </span>
+          {{ end }}
+        </div>
         <div class="law-lp-trust-tags">
           {{ range .Params.trust_bar.tags }}
           <span class="law-lp-trust-tag">{{ . }}</span>

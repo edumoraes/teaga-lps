@@ -16,9 +16,12 @@ hero:
 
 trust_bar:
   label: "Especialistas em"
+  platforms:
+    - name: "Google Ads"
+      image: "images/lp-advogados/gads-logo.webp"
+    - name: "Meta Ads"
+      image: "images/lp-advogados/mads-logo.webp"
   tags:
-    - "Google Ads"
-    - "Meta Ads"
     - "Trabalhista"
     - "Previdenciário"
     - "Família"

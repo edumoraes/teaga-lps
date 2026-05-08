@@ -1120,8 +1120,16 @@ h1, h2, h3, h4 {
 }
 
 .law-lp-footer-grid {
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  text-align: center;
+}
+
+.law-lp-footer-grid .law-lp-logo {
+  margin: 0 auto;
+  max-height: 28px;
 }
 
 .law-lp-footer p {
@@ -1244,25 +1252,95 @@ h1, h2, h3, h4 {
 .law-lp-trust-bar {
   position: relative;
   z-index: 1;
-  padding: 1.65rem 0;
+  padding: 5rem 0 4.5rem;
   background: var(--color-background-surface);
-  border-bottom: 1px solid var(--color-border-default);
+  border-top: 1px solid rgba(var(--color-base-gold-rgb), 0.18);
+  border-bottom: 1px solid rgba(var(--color-base-gold-rgb), 0.18);
 }
+
+.law-lp-trust-bar::before,
+.law-lp-trust-bar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: min(72%, 720px);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--color-base-gold-rgb), 0.55),
+    transparent
+  );
+}
+
+.law-lp-trust-bar::before { top: 0; }
+.law-lp-trust-bar::after { bottom: 0; }
 
 .law-lp-trust-inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2.25rem;
+}
+
+.law-lp-trust-bar .law-lp-eyebrow {
+  margin-bottom: 0;
+}
+
+.law-lp-trust-platforms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
   flex-wrap: wrap;
 }
 
-.law-lp-trust-label {
-  color: var(--text-muted);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.law-lp-trust-platform {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.75rem;
+  height: 5.75rem;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  will-change: transform;
+}
+
+.law-lp-trust-platform:hover {
+  transform: translateY(-2px);
+}
+
+.law-lp-trust-platform img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(72%)
+    sepia(57%)
+    saturate(545%)
+    hue-rotate(7deg)
+    brightness(95%)
+    contrast(88%)
+    drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
+}
+
+.law-lp-trust-platform:hover img {
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(82%)
+    sepia(55%)
+    saturate(560%)
+    hue-rotate(7deg)
+    brightness(105%)
+    contrast(90%)
+    drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
 }
 
 .law-lp-trust-tags {
@@ -1328,9 +1406,9 @@ h1, h2, h3, h4 {
 }
 
 .law-lp-problem-tag-solution {
-  color: var(--accent-primary);
-  background: rgba(var(--color-base-gold-rgb), 0.12);
-  border: 1px solid rgba(var(--color-base-gold-rgb), 0.24);
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.32);
 }
 
 .law-lp-problem-card h3 {
@@ -1773,12 +1851,17 @@ h1, h2, h3, h4 {
 }
 
 .law-lp .law-lp-offer-list {
-  display: inline-block;
-  width: auto;
+  display: block;
+  width: fit-content;
   max-width: 620px;
   margin: 2.4rem auto;
   padding: 2rem 2.4rem;
   text-align: left;
+}
+
+.law-lp-offer-section .btn {
+  display: inline-flex;
+  margin: 0.4rem auto 0;
 }
 
 .law-lp-offer-note {
@@ -2148,12 +2231,26 @@ h1, h2, h3, h4 {
     line-height: 1.08;
   }
 
-  .law-lp-trust-inner {
-    justify-content: flex-start;
+  .law-lp-trust-bar {
+    padding: 3.5rem 0 3.25rem;
+  }
+
+  .law-lp-trust-bar::before,
+  .law-lp-trust-bar::after {
+    width: 80%;
+  }
+
+  .law-lp-trust-platforms {
+    gap: 1.25rem;
+  }
+
+  .law-lp-trust-platform {
+    width: 4.25rem;
+    height: 4.25rem;
   }
 
   .law-lp-trust-tags {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .law-lp-problem-grid,
