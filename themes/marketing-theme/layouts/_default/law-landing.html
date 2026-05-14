@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
-{{ $whatsappNumber := .Params.whatsapp_number | default "5592999999999" }}
-{{ $whatsappMessage := .Params.whatsapp_message | default "Olá, quero minha consultoria estratégica para advogados." }}
-{{ $whatsappHref := printf "https://wa.me/%s?text=%s" $whatsappNumber ($whatsappMessage | urlquery) }}
+{{ $ctaHref := "https://form.typeform.com/to/Ohrat3Sb" }}
 <body class="law-lp">
   <header class="law-lp-header">
     <div class="container law-lp-nav">
@@ -16,7 +14,7 @@
         <a href="#incluso">Incluso</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a href="{{ $whatsappHref }}" class="btn btn-primary law-lp-nav-cta">
+      <a href="{{ $ctaHref }}" class="btn btn-primary law-lp-nav-cta">
         <span>Agendar</span>
         {{ partial "lucide_icon.html" (dict "icon" "calendar-check" "class" "law-lp-btn-icon") }}
       </a>
@@ -42,7 +40,7 @@
           <h1>{{ .Params.hero.title | safeHTML }}</h1>
           <p class="law-lp-hero-subtitle">{{ .Params.hero.subtitle }}</p>
           <div class="law-lp-hero-actions">
-            <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">
+            <a href="{{ $ctaHref }}" class="btn btn-primary btn-large">
               <span>{{ .Params.hero.cta }}</span>
               {{ partial "lucide_icon.html" (dict "icon" "arrow-right" "class" "law-lp-btn-icon") }}
             </a>
@@ -185,7 +183,7 @@
       <div class="container" data-reveal>
         <h2>{{ .Params.final_cta.title | safeHTML }}</h2>
         <p>{{ .Params.final_cta.text }}</p>
-        <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">
+        <a href="{{ $ctaHref }}" class="btn btn-primary btn-large">
           <span>{{ .Params.final_cta.cta }}</span>
           {{ partial "lucide_icon.html" (dict "icon" "arrow-right" "class" "law-lp-btn-icon") }}
         </a>

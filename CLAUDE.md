@@ -25,9 +25,9 @@ When editing the lawyer landing page, edit `_default/law-landing.html` directly.
 
 ### Content-driven copy
 
-The lawyer LP is almost entirely data-driven from front matter in `content/landing-page-teaga-advogados-ROMA-4Us.md`. Section copy, CTAs, FAQ items, audience cards, and the WhatsApp number all live there. **Default to editing front matter, not the template.** Add a template branch only when introducing new structural behavior.
+The lawyer LP is almost entirely data-driven from front matter in `content/landing-page-teaga-advogados-ROMA-4Us.md`. Section copy, CTAs, FAQ items, and audience cards all live there. **Default to editing front matter, not the template.** Add a template branch only when introducing new structural behavior.
 
-WhatsApp CTAs are built from `whatsapp_number` + `whatsapp_message` front matter via a `$whatsappHref` variable defined at the top of `law-landing.html`. Reuse that variable; do not hardcode `wa.me` URLs.
+All CTAs point to the Typeform URL held in the `$ctaHref` variable at the top of `law-landing.html`. Reuse that variable; do not hardcode CTA URLs.
 
 ### Icons
 
