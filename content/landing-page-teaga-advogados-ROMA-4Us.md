@@ -47,6 +47,7 @@ problem_solution:
 audience:
   eyebrow: "Para quem é"
   title: 'Criado para quem <span class="accent">já é bom</span><br>no que faz'
+  cta: "QUERO FECHAR MAIS CONTRATOS"
   cards:
     - icon: "scale"
       title: "Advogados autônomos"
@@ -61,6 +62,7 @@ audience:
 deliverables:
   eyebrow: "O que está incluso"
   title: 'Tudo que seu escritório precisa<br><span class="accent">para crescer com método</span>'
+  cta: "QUERO FECHAR MAIS CONTRATOS"
   items:
     - title: "Campanhas no Google e Meta"
       text: "Configuração, criativos, copy e otimização diária voltados para captação de leads qualificados."

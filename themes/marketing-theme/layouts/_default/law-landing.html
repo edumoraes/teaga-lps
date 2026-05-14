@@ -8,12 +8,6 @@
       <a href="/" class="law-lp-logo-link" aria-label="Teagá Digital">
         <img src="{{ "images/logo.webp" | relURL }}" alt="Teagá Digital" class="law-lp-logo" width="120" height="40">
       </a>
-      <nav class="law-lp-nav-links" aria-label="Navegação principal">
-        <a href="#problema">Problema</a>
-        <a href="#para-quem">Para quem</a>
-        <a href="#incluso">Incluso</a>
-        <a href="#faq">FAQ</a>
-      </nav>
       <a href="{{ $ctaHref }}" class="btn btn-primary law-lp-nav-cta">
         <span>Agendar</span>
         {{ partial "lucide_icon.html" (dict "icon" "calendar-check" "class" "law-lp-btn-icon") }}
@@ -104,6 +98,14 @@
           </article>
           {{ end }}
         </div>
+        {{ with .Params.audience.cta }}
+        <div class="law-lp-audience-cta" data-reveal>
+          <a href="{{ $ctaHref }}" class="btn btn-primary btn-large">
+            <span>{{ . }}</span>
+            {{ partial "lucide_icon.html" (dict "icon" "arrow-right" "class" "law-lp-btn-icon") }}
+          </a>
+        </div>
+        {{ end }}
       </div>
     </section>
 
@@ -133,6 +135,14 @@
               </article>
               {{ end }}
             </div>
+            {{ with .Params.deliverables.cta }}
+            <div class="law-lp-deliverables-cta" data-reveal>
+              <a href="{{ $ctaHref }}" class="btn btn-primary btn-large">
+                <span>{{ . }}</span>
+                {{ partial "lucide_icon.html" (dict "icon" "arrow-right" "class" "law-lp-btn-icon") }}
+              </a>
+            </div>
+            {{ end }}
           </div>
         </div>
       </div>

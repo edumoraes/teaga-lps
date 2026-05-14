@@ -1184,6 +1184,16 @@ h1, h2, h3, h4 {
     var(--color-background-surface);
 }
 
+@media (min-aspect-ratio: 2 / 1) {
+  .law-lp .law-lp-hero {
+    background:
+      linear-gradient(90deg, rgba(var(--color-base-black-rgb), 0.96) 0%, rgba(var(--color-base-black-rgb), 0.84) 34%, rgba(var(--color-base-black-rgb), 0.2) 52%, transparent 68%),
+      radial-gradient(ellipse 52% 42% at 18% 28%, rgba(var(--color-base-gold-rgb), 0.16), transparent 72%),
+      var(--law-lp-hero-image) right top / cover no-repeat,
+      var(--color-background-surface);
+  }
+}
+
 .law-lp .law-lp-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr);
@@ -1435,6 +1445,12 @@ h1, h2, h3, h4 {
   align-items: stretch;
 }
 
+.law-lp-audience-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
 .law-lp-audience-card {
   position: relative;
   display: flex;
@@ -1569,13 +1585,13 @@ h1, h2, h3, h4 {
   z-index: 2;
   max-width: 23rem;
   margin-bottom: 0.72rem;
+  font-family: var(--font-serif);
   font-size: clamp(1.35rem, 2vw, 1.72rem);
   letter-spacing: 0;
 }
 
 .law-lp-audience-card-1 h3 {
   max-width: 25rem;
-  font-family: var(--font-serif);
   font-size: clamp(2rem, 3vw, 3rem);
   line-height: 1.02;
 }
@@ -1626,6 +1642,12 @@ h1, h2, h3, h4 {
   grid-template-columns: 1fr;
   overflow: hidden;
   border-top: 1px solid var(--color-border-default);
+}
+
+.law-lp-deliverables-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
 }
 
 .law-lp-deliverable {
@@ -2207,8 +2229,7 @@ h1, h2, h3, h4 {
     margin-bottom: 1.15rem;
   }
 
-  .law-lp-audience-card h3,
-  .law-lp-audience-card-1 h3 {
+  .law-lp-audience-card h3 {
     font-size: clamp(1.42rem, 7vw, 1.78rem);
     line-height: 1.08;
   }
