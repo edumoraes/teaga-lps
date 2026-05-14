@@ -152,34 +152,9 @@
             <div class="law-lp-stars" aria-label="Cinco estrelas">★★★★★</div>
             <blockquote>{{ .quote }}</blockquote>
             <p class="law-lp-testimonial-author">{{ .author }}</p>
-            <p class="law-lp-testimonial-role">{{ .role }}</p>
           </article>
           {{ end }}
         </div>
-        <p class="law-lp-testimonial-disclaimer">{{ .Params.testimonials.disclaimer }}</p>
-      </div>
-    </section>
-
-    <section id="oferta" class="law-lp-section law-lp-offer-section">
-      <div class="container law-lp-offer-center" data-reveal>
-        <p class="law-lp-eyebrow">{{ .Params.offer.eyebrow }}</p>
-        <h2>{{ .Params.offer.title | safeHTML }}</h2>
-        <p class="law-lp-section-lead">{{ .Params.offer.subtitle }}</p>
-        <div class="law-lp-offer-list">
-          <ul class="law-lp-check-list">
-            {{ range .Params.offer.items }}
-            <li>
-              {{ partial "lucide_icon.html" (dict "icon" "circle-check" "class" "law-lp-check-icon") }}
-              <span>{{ . }}</span>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-        <a href="{{ $whatsappHref }}" class="btn btn-primary btn-large">
-          <span>{{ .Params.offer.cta }}</span>
-          {{ partial "lucide_icon.html" (dict "icon" "arrow-right" "class" "law-lp-btn-icon") }}
-        </a>
-        <span class="law-lp-offer-note">{{ .Params.offer.note }}</span>
       </div>
     </section>
 

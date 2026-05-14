@@ -485,8 +485,8 @@ h1, h2, h3, h4 {
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'DM Sans', sans-serif;
   --font-mono: 'DM Sans', sans-serif;
-  --law-lp-hero-image: url("../images/lp-advogados/hero-novo.png");
-  --law-lp-hero-mobile-image: url("../images/lp-advogados/hero-novo.png");
+  --law-lp-hero-image: url("../images/lp-advogados/hero-final.png");
+  --law-lp-hero-mobile-image: url("../images/lp-advogados/hero-final.png");
   --law-lp-differentials-image: url("../images/lp-advogados/differentials-texture.webp");
   --law-lp-consultation-image: url("../images/lp-advogados/consultation-overlay.webp");
   --law-lp-final-image: url("../images/lp-advogados/final-cta-compass.webp");
@@ -1301,46 +1301,28 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 5.75rem;
-  height: 5.75rem;
+  width: 7.5rem;
+  height: 7.5rem;
   aspect-ratio: 1 / 1;
-  transition: transform 0.25s ease, filter 0.25s ease;
+  padding: 0.85rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   will-change: transform;
 }
 
 .law-lp-trust-platform:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
 }
 
 .law-lp-trust-platform img {
   display: block;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  filter:
-    brightness(0)
-    saturate(100%)
-    invert(72%)
-    sepia(57%)
-    saturate(545%)
-    hue-rotate(7deg)
-    brightness(95%)
-    contrast(88%)
-    drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
-}
-
-.law-lp-trust-platform:hover img {
-  filter:
-    brightness(0)
-    saturate(100%)
-    invert(82%)
-    sepia(55%)
-    saturate(560%)
-    hue-rotate(7deg)
-    brightness(105%)
-    contrast(90%)
-    drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
+  width: auto;
+  height: 3.1rem;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .law-lp-trust-tags {
@@ -2108,13 +2090,13 @@ h1, h2, h3, h4 {
     background-position:
       center,
       center top,
-      center top,
+      right -2rem top,
       center;
     background-repeat: no-repeat;
     background-size:
       100% 100%,
       100% 100%,
-      100% auto,
+      auto clamp(20rem, 58svh, 32rem),
       100% 100%;
   }
 
@@ -2245,8 +2227,13 @@ h1, h2, h3, h4 {
   }
 
   .law-lp-trust-platform {
-    width: 4.25rem;
-    height: 4.25rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    padding: 0.6rem;
+  }
+
+  .law-lp-trust-platform img {
+    height: 2.2rem;
   }
 
   .law-lp-trust-tags {

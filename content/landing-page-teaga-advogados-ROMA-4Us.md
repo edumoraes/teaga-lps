@@ -8,11 +8,11 @@ whatsapp_message: "Olá, quero minha consultoria estratégica para advogados."
 
 hero:
   badge: "MARKETING PARA ADVOGADOS"
-  compliance_seal: "OAB COMPLIANT"
+  compliance_seal: "CONFORME A OAB"
   title: 'Feche <span class="accent">mais <br>Contratos</span> <br>Todo Mês'
   subtitle: "A Teagá conecta seu escritório a clientes que já procuram ajuda jurídica, sem depender apenas de indicações."
-  cta: "Quero fechar mais contratos"
-  microcopy: "Diagnóstico rápido para saber onde seu escritório pode captar mais clientes"
+  cta: "QUERO FECHAR MAIS CONTRATOS"
+  microcopy: "O primeiro passo é preencher o formulário. Leva só 1 minuto."
 
 trust_bar:
   label: "Especialistas em"
@@ -22,15 +22,18 @@ trust_bar:
     - name: "Meta Ads"
       image: "images/lp-advogados/mads-logo.webp"
   tags:
-    - "Trabalhista"
-    - "Previdenciário"
-    - "Família"
     - "Empresarial"
-    - "Dentro das normas OAB"
+    - "Tributário"
+    - "Criminal"
+    - "Família"
+    - "Trabalhista"
+    - "Bancário"
+    - "Consumidor"
+    - "Previdenciário"
 
 problem_solution:
   eyebrow: "O problema que resolvemos"
-  title: "Boa advocacia não basta<br>se o cliente não te encontra"
+  title: 'Boa advocacia não basta<br><span class="accent">se o cliente não te encontra</span>'
   cards:
     - kind: "problem"
       label: "Problema"
@@ -61,16 +64,20 @@ deliverables:
   items:
     - title: "Campanhas no Google e Meta"
       text: "Configuração, criativos, copy e otimização diária voltados para captação de leads qualificados."
-    - title: "Landing Page estratégica"
+    - title: "Landing Page de Alta Conversão"
       text: "Página de captura otimizada para conversão, alinhada com o Google Ads para baixar o CPA."
-    - title: "Script de atendimento comercial"
-      text: "Roteiro com quebra de objeções e gatilhos para converter o lead em contrato no WhatsApp."
-    - title: "Relatórios 2-3x por semana"
-      text: "Números claros, sem enrolação. Você sabe exatamente o que está funcionando e o que está sendo ajustado."
-    - title: "Planilha de CRM"
-      text: "Controle de leads, etapa do funil e histórico de oportunidades em um só lugar."
-    - title: "Suporte direto via WhatsApp"
-      text: "Acesso ao time operacional sem burocracia. Dúvida ou ajuste, responde rápido."
+    - title: "Copywriting com DNA do Advogado"
+      text: "Textos que traduzem a autoridade, especialidade e posicionamento do advogado em uma comunicação ética, clara e persuasiva."
+    - title: "Criativos Mensais"
+      text: "8 criativos estáticos mensais com design estratégico e ângulos de copy alinhados ao método Andrômeda para gerar autoridade, confiança e contatos qualificados."
+    - title: "Rastreamento de Leads"
+      text: "Mapeamos a origem dos leads para medir quais campanhas geram mais contatos e oportunidades reais."
+    - title: "Dashboard Personalizado"
+      text: "Painel com os principais indicadores das campanhas para acompanhar resultados e tomar decisões com mais clareza."
+    - title: "RMR — Revisão Mensal de Resultados"
+      text: "Reunião mensal para analisar os resultados, identificar oportunidades e alinhar os próximos passos da estratégia."
+    - title: "IA integrada ao WhatsApp Oficial"
+      text: "Resposta imediata aos leads no WhatsApp Business oficial: a IA qualifica o primeiro contato, organiza as conversas e encaminha as oportunidades certas para sua equipe focar no fechamento."
 
 numbers:
   eyebrow: "Resultados que você pode esperar"
@@ -99,55 +106,37 @@ process:
 testimonials:
   eyebrow: "Resultados reais"
   title: 'Escritórios que <span class="accent">já pararam<br>de depender de indicação</span>'
-  disclaimer: "* Depoimentos ilustrativos. Substitua pelos seus cases reais antes de publicar."
   items:
-    - quote: "Em menos de 60 dias o Google já estava mandando contatos qualificados todo dia. Nunca tinha visto isso acontecer antes."
-      author: "Dr. Marcos V."
-      role: "Advogado Trabalhista · Manaus/AM"
-    - quote: "A Teagá entende do jurídico. Nenhum criativo feriu a OAB e os leads chegam sabendo o que querem. Facilita demais o fechamento."
-      author: "Dra. Camila R."
-      role: "Advogada de Família · Belém/PA"
-    - quote: "O que eu mais gostei foi a transparência. Recebo relatório de campanha 3x por semana. Sei exatamente para onde vai o meu investimento."
-      author: "Dr. Rafael T."
-      role: "Escritório Empresarial · Manaus/AM"
-    - quote: "Antes dependia 100% de indicação. Hoje tenho previsibilidade. Consigo planejar a equipe porque sei quantos clientes vêm por mês."
-      author: "Dra. Juliana F."
-      role: "Advogada Previdenciária · Fortaleza/CE"
-    - quote: "Setup foi rápido, em uma semana já estava no ar. E o suporte é ágil, qualquer dúvida o time responde no WhatsApp mesmo."
-      author: "Dr. Fábio A."
-      role: "Advogado Trabalhista · Goiânia/GO"
-
-offer:
-  eyebrow: "Dê o primeiro passo"
-  title: 'Consultoria estratégica<br><span class="accent">para advogados</span>'
-  subtitle: "30-40 minutos online. Saindo com um plano concreto para encher sua agenda nos próximos 90 dias."
-  cta: "Quero minha consultoria"
-  note: "Vagas limitadas por mês · Sem compromisso"
-  items:
-    - "Diagnóstico do seu posicionamento digital atual"
-    - "Sugestão de campanhas para sua área e região"
-    - "Estimativa de investimento e CPL esperado"
-    - "Orientação para adequar comunicação à OAB"
+    - quote: "Os contatos começaram a chegar com assunto mais claro, mais intenção mesmo. E vocês acompanhavam o que estava vindo, ajustavam campanha, olhavam a qualidade dos leads. Isso ajudou muito a gente a focar nas oportunidades e fechar mais contratos."
+      author: "Dr. Cézar Brandão"
+    - quote: "Eu não entendo muito de anúncio, mas comecei a ver pessoas realmente interessadas procurando o escritório. Isso me deu segurança e ajudou bastante nos fechamentos."
+      author: "Isabella Marra"
+    - quote: "O que funcionou com vocês foi trazer lead com mais intenção e acompanhar se a campanha estava trazendo oportunidade de verdade. Quando a gente começou a entender quais contatos tinham mais chance de fechar, o investimento passou a fazer mais sentido."
+      author: "Dr. Caio Rezende"
+    - quote: "A gente sabia de onde vinham os leads, quais campanhas estavam performando melhor e quais contatos tinham mais potencial. Não fica aquela sensação de 'estou investindo e torcendo'. Estou muito satisfeito com o resultado até aqui."
+      author: "Dr. Leonardo Barreto"
+    - quote: "Com a Teagá, a captação ficou mais organizada e recebemos bastante lead. Isso ajudou o escritório a enxergar melhor onde estavam os bons contatos e quais tinham mais chance de virar fechamento."
+      author: "Dr. Luiz Ossuosky"
 
 faq:
   eyebrow: "Perguntas frequentes"
-  title: 'Antes de agendar,<br><span class="accent">tire suas dúvidas</span>'
+  title: 'Ainda em dúvida se isso <span class="accent">faz sentido para seu escritório?</span>'
   questions:
     - question: "Isso está de acordo com as normas da OAB?"
       answer: "Sim. Toda estratégia é montada respeitando as diretrizes da OAB, sem promessas de resultado específico, sem exposição de casos e sem linguagem sensacionalista."
     - question: "Preciso ter site ou Instagram estruturado?"
-      answer: "Não necessariamente. Na consultoria mapeamos o que você tem e priorizamos as ações que geram resultado mais rápido. Em muitos casos a landing page já resolve."
+      answer: "Não. Em nossa primeira conversa iremos mapear o que você tem e priorizamos as ações que geram mais resultado para o seu nicho. Em muitos casos a landing page já resolve."
     - question: "Quanto preciso investir em anúncios?"
-      answer: "Depende da sua área e região. Já na consultoria apresentamos faixas realistas de investimento e expectativa de geração de leads para o seu perfil específico."
+      answer: "Cada área do Direito tem um custo por lead diferente. Por isso, avaliamos seu nicho e região, mas recomendamos iniciar com no mínimo R$ 1.500/mês em anúncios."
     - question: "Quando começo a ver os primeiros resultados?"
       answer: "Em muitos casos surgem primeiros contatos nas primeiras semanas. Mas trabalhamos para construção de previsibilidade, o objetivo é um funil consistente, não um pico pontual."
     - question: "A Teagá atende só advogados?"
       answer: "Somos especializados em negócios locais e serviços. Para advogados, temos uma metodologia específica que respeita as particularidades do mercado jurídico."
 
 final_cta:
-  title: 'O próximo cliente certo<br>pode te encontrar <span class="accent">hoje</span>'
+  title: 'O próximo cliente certo<br><span class="accent">pode te encontrar hoje</span>'
   text: "Você não controla quando alguém vai indicar seu nome. Mas pode controlar sua presença onde seus futuros clientes estão buscando ajuda agora."
-  cta: "Agendar consultoria"
+  cta: "QUERO FECHAR MAIS CONTRATOS"
 
 footer:
   copyright: "© Copyright 2024 Todos os direitos reservados"
