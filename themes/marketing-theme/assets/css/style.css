@@ -485,8 +485,8 @@ h1, h2, h3, h4 {
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'DM Sans', sans-serif;
   --font-mono: 'DM Sans', sans-serif;
-  --law-lp-hero-image: url("../images/lp-advogados/hero-final.png");
-  --law-lp-hero-mobile-image: url("../images/lp-advogados/hero-final.png");
+  --law-lp-hero-image: url("../images/lp-advogados/hero-final.webp");
+  --law-lp-hero-mobile-image: url("../images/lp-advogados/hero-final.webp");
   --law-lp-differentials-image: url("../images/lp-advogados/differentials-texture.webp");
   --law-lp-consultation-image: url("../images/lp-advogados/consultation-overlay.webp");
   --law-lp-final-image: url("../images/lp-advogados/final-cta-compass.webp");
