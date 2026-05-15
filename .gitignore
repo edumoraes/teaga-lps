@@ -13,3 +13,6 @@ hugo.linux
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+# WordPress deploy bundle (regenerable via scripts/build-wp.py)
+/wp-deploy/
